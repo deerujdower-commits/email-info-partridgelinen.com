@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
@@ -140,6 +141,11 @@ const Restaurant = () => {
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
+      <Helmet>
+        <title>Restaurant Linen Hire London | Tablecloths & Napkins | Partridge Linen</title>
+        <meta name="description" content="Premium restaurant linen hire across London & South East. Tablecloths, napkins, chef uniforms & kitchen linen for fine dining and hospitality." />
+        <link rel="canonical" href="https://partridgelinen.com/restaurant" />
+      </Helmet>
       <Navigation />
       
       {/* Hero Section */}

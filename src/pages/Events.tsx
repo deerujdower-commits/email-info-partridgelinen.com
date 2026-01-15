@@ -1,4 +1,5 @@
 import { useState, lazy, Suspense } from 'react';
+import { Helmet } from 'react-helmet-async';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { Phone, Mail, Images } from 'lucide-react';
@@ -300,6 +301,11 @@ const Events = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Event Linen Hire London | Wedding & Party Tablecloths | Partridge Linen</title>
+        <meta name="description" content="Premium event linen hire for weddings, parties & corporate events. Damask tablecloths, chair covers & napkins in 15+ colours. London & South East delivery." />
+        <link rel="canonical" href="https://partridgelinen.com/events" />
+      </Helmet>
       <Navigation />
 
       {/* Hero Section */}
@@ -308,6 +314,9 @@ const Events = () => {
           src={eventsHero} 
           alt="Elegant damask tablecloth with fine dining place setting"
           className="w-full h-full object-cover object-center"
+          loading="eager"
+          fetchPriority="high"
+          decoding="async"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
         <div className="absolute bottom-0 left-0 right-0 p-8 md:p-12">

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
@@ -59,6 +60,11 @@ const HotelLinens = () => {
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
+      <Helmet>
+        <title>Hotel Linen Hire London | Bed Sheets & Towels | Partridge Linen</title>
+        <meta name="description" content="Professional hotel linen hire across London & South East. Premium bed sheets, duvet covers, pillowcases & bath towels for hotels, B&Bs, and Airbnbs." />
+        <link rel="canonical" href="https://partridgelinen.com/hotel-linens" />
+      </Helmet>
       <Navigation />
       
       {/* Hero Section */}
