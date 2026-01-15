@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
@@ -141,6 +142,11 @@ const Enquiry = () => {
   if (items.length === 0) {
     return (
       <div className="min-h-screen bg-background">
+        <Helmet>
+          <title>Enquiry Basket | Partridge Linen</title>
+          <meta name="description" content="Review your linen hire enquiry basket. Request quotes for tablecloths, napkins, chair covers & event linens from Partridge Linen." />
+          <link rel="canonical" href="https://partridgelinen.com/enquiry" />
+        </Helmet>
         <Navigation />
         <main className="pt-32 pb-12">
           <div className="max-w-4xl mx-auto px-6 md:px-12">
@@ -249,6 +255,11 @@ const Enquiry = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Enquiry Basket | Partridge Linen</title>
+        <meta name="description" content="Review your linen hire enquiry basket. Request quotes for tablecloths, napkins, chair covers & event linens from Partridge Linen." />
+        <link rel="canonical" href="https://partridgelinen.com/enquiry" />
+      </Helmet>
       <Navigation />
       
       <main className="pt-32 pb-12">
