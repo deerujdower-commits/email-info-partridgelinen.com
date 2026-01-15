@@ -178,7 +178,7 @@ const CollectionModal = ({ isOpen, onClose, category, fromEventsPage = false }: 
     }
   }, [isOpen, category.id, fromEventsPage]);
 
-  if (!isOpen) return null;
+  
 
   // Get image range for current workwear selection
   const getWorkwearImageRange = () => {
@@ -368,13 +368,12 @@ const CollectionModal = ({ isOpen, onClose, category, fromEventsPage = false }: 
 
   return (
     <div 
-      className="fixed inset-0 z-50 flex items-start lg:items-center justify-center bg-black/50 p-4 overflow-y-auto overscroll-contain animate-fade-in"
-      style={{ WebkitOverflowScrolling: 'touch', touchAction: 'pan-y', willChange: 'opacity' }}
+      className={`fixed inset-0 z-50 flex items-start lg:items-center justify-center bg-black/50 p-4 overflow-y-auto overscroll-contain ${isOpen ? 'visible opacity-100' : 'invisible opacity-0 pointer-events-none'}`}
+      style={{ WebkitOverflowScrolling: 'touch', touchAction: 'pan-y', transition: 'none' }}
       onClick={(e) => e.target === e.currentTarget && onClose()}
     >
       <div 
-        className="bg-background border border-border rounded-lg max-w-4xl w-full my-4 lg:my-8 flex flex-col max-h-none lg:max-h-[calc(100vh-4rem)] animate-scale-in"
-        style={{ willChange: 'transform, opacity' }}
+        className={`bg-background border border-border rounded-lg max-w-4xl w-full my-4 lg:my-8 flex flex-col max-h-none lg:max-h-[calc(100vh-4rem)] ${isOpen ? '' : 'scale-95'}`}
       >
         {/* Header */}
         <div className="flex items-center justify-between p-4 lg:p-6 border-b border-border flex-shrink-0">
