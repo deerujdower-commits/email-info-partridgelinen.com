@@ -1,4 +1,4 @@
-import { useState, useEffect, memo, useCallback } from 'react';
+import { useState, useEffect, memo } from 'react';
 import { X, Copy, Check, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -31,7 +31,6 @@ const EnquiryModal = memo(({ isOpen, onClose, productName }: EnquiryModalProps) 
   }, [productName]);
 
   const emailAddress = 'info@partridgelinen.com';
-  const phoneNumberDisplay = '020 8653 6066';
   const phoneNumberTel = '02086536066';
 
   // Prevent body scroll when modal is open
