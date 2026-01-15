@@ -30,7 +30,7 @@ const EnquiryModal = memo(({ isOpen, onClose, productName }: EnquiryModalProps) 
     }
   }, [productName]);
 
-  const emailAddress = 'enquiry@partridgelinenhire.co.uk';
+  const emailAddress = 'info@partridgelinen.com';
   const phoneNumberDisplay = '020 8653 6066';
   const phoneNumberTel = '02086536066';
 
