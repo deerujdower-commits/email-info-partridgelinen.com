@@ -28,7 +28,7 @@ const contactMethods = [
     subtitle: 'Quick Response',
     description: 'Send us your requirements and we\'ll respond within one working day.',
     icon: Mail,
-    contact: 'enquiry@partridgelinenhire.co.uk',
+    contact: 'info@partridgelinen.com',
     featured: false,
     action: 'email'
   },

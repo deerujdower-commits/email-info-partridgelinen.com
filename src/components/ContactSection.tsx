@@ -85,7 +85,7 @@ const ContactSection = ({ onEnquireClick }: ContactSectionProps) => {
                   onClick={onEnquireClick}
                   className="text-white font-body leading-relaxed hover:text-white/80 transition-colors cursor-pointer text-left"
                 >
-                  enquiry@partridgelinenhire.co.uk
+                  info@partridgelinen.com
                 </button>
               </div>
             </div>

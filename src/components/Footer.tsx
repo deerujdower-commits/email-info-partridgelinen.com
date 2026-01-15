@@ -45,7 +45,7 @@ const Footer = ({ onEmailClick }: FooterProps) => {
                 className="font-body text-muted-foreground hover:text-primary transition-colors flex items-center gap-2 text-left"
               >
                 <Mail className="w-4 h-4 shrink-0" />
-                enquiry@partridgelinenhire.co.uk
+                info@partridgelinen.com
               </button>
             </div>
           </div>
