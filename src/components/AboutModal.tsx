@@ -28,8 +28,6 @@ const AboutModal = ({ isOpen, onClose, onEnquireClick, section }: AboutModalProp
     };
   }, [isOpen]);
 
-  if (!isOpen) return null;
-
   const getExtendedDescription = (sectionId: number) => {
     const extendedDescriptions = {
       1: `Founded over three decades ago by the Partridge family with a simple mission: to provide the finest commercial linen services to restaurants, hotels, and events across the region. What started as a small family operation has grown into a trusted cornerstone of our community, serving hundreds of satisfied customers with the same dedication and personal touch that defined our early days.
@@ -68,8 +66,11 @@ The next generation of the Partridge family brings fresh ideas and energy to the
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4 overflow-y-auto animate-fade-in">
-      <div className="bg-background border border-border rounded-lg max-w-4xl w-full my-8 flex flex-col max-h-[calc(100vh-4rem)] animate-scale-in">
+    <div 
+      className={`fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4 overflow-y-auto ${isOpen ? 'visible opacity-100' : 'invisible opacity-0 pointer-events-none'}`}
+      style={{ transition: 'none' }}
+    >
+      <div className={`bg-background border border-border rounded-lg max-w-4xl w-full my-8 flex flex-col max-h-[calc(100vh-4rem)] ${isOpen ? '' : 'scale-95'}`}>
         {/* Header */}
         <div className="flex items-center justify-between p-6 border-b border-border flex-shrink-0">
           <div>

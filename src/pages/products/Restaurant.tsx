@@ -1,15 +1,14 @@
-import { useState, lazy, Suspense } from 'react';
+import { useState } from 'react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft, Mail, Phone, Award, Truck, Users } from 'lucide-react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import WhyUsSection from '@/components/WhyUsSection';
-import ModalSkeleton from '@/components/ModalSkeleton';
 import LazyImage from '@/components/LazyImage';
 
-const EnquiryModal = lazy(() => import('@/components/EnquiryModal'));
-const CollectionModal = lazy(() => import('@/components/CollectionModal'));
+import EnquiryModal from '@/components/EnquiryModal';
+import CollectionModal from '@/components/CollectionModal';
 // Tablecloth images
 const studioFittedWhiteTablecloth = '/lovable-uploads/cf54b1ce-fef7-4ac1-8bbc-34b126347063.png';
 const studioFittedBlackTableclothV2 = '/lovable-uploads/e059eed4-9708-4d5a-8545-42094ce503da.png';
@@ -283,30 +282,22 @@ const Restaurant = () => {
       </main>
 
       <Footer onEmailClick={() => setIsEnquiryOpen(true)} />
-      {isEnquiryOpen && (
-        <Suspense fallback={<ModalSkeleton type="form" />}>
-          <EnquiryModal
-            isOpen={isEnquiryOpen}
-            onClose={() => setIsEnquiryOpen(false)}
-          />
-        </Suspense>
-      )}
-      {selectedModal && (
-        <Suspense fallback={<ModalSkeleton type="product" />}>
-          <CollectionModal
-            isOpen={selectedModal !== null}
-            onClose={() => setSelectedModal(null)}
-            category={{
-              id: selectedModal.id,
-              title: selectedModal.title,
-              subtitle: '',
-              description: selectedModal.description,
-              images: selectedModal.images,
-              slug: selectedModal.slug
-            }}
-          />
-        </Suspense>
-      )}
+      <EnquiryModal
+        isOpen={isEnquiryOpen}
+        onClose={() => setIsEnquiryOpen(false)}
+      />
+      <CollectionModal
+        isOpen={selectedModal !== null}
+        onClose={() => setSelectedModal(null)}
+        category={selectedModal ? {
+          id: selectedModal.id,
+          title: selectedModal.title,
+          subtitle: '',
+          description: selectedModal.description,
+          images: selectedModal.images,
+          slug: selectedModal.slug
+        } : { id: 0, title: '', subtitle: '', description: '', images: [], slug: '' }}
+      />
     </div>
   );
 };

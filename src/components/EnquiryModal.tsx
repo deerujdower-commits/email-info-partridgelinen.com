@@ -46,8 +46,6 @@ const EnquiryModal = memo(({ isOpen, onClose, productName }: EnquiryModalProps) 
     };
   }, [isOpen]);
 
-  if (!isOpen) return null;
-
   const validateForm = () => {
     const newErrors: { [key: string]: string } = {};
 
@@ -128,8 +126,11 @@ const EnquiryModal = memo(({ isOpen, onClose, productName }: EnquiryModalProps) 
   };
 
   return (
-    <div className="fixed inset-0 z-[60] flex items-center justify-center bg-black/50 p-4 overflow-y-auto animate-fade-in">
-      <div className="bg-background border border-border rounded-lg max-w-2xl w-full my-8 flex flex-col max-h-[calc(100vh-4rem)] animate-scale-in">
+    <div 
+      className={`fixed inset-0 z-[60] flex items-center justify-center bg-black/50 p-4 overflow-y-auto ${isOpen ? 'visible opacity-100' : 'invisible opacity-0 pointer-events-none'}`}
+      style={{ transition: 'none' }}
+    >
+      <div className={`bg-background border border-border rounded-lg max-w-2xl w-full my-8 flex flex-col max-h-[calc(100vh-4rem)] ${isOpen ? '' : 'scale-95'}`}>
         {/* Header */}
         <div className="flex items-center justify-between p-6 border-b border-border flex-shrink-0">
           <div>

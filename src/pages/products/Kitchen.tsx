@@ -1,14 +1,13 @@
-import { useState, lazy, Suspense } from 'react';
+import { useState } from 'react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Mail, Phone, ShieldCheck, Layers, HandMetal, Truck, Users } from 'lucide-react';
 
 import WhyUsSection from '@/components/WhyUsSection';
-import ModalSkeleton from '@/components/ModalSkeleton';
 import LazyImage from '@/components/LazyImage';
 
-const EnquiryModal = lazy(() => import('@/components/EnquiryModal'));
+import EnquiryModal from '@/components/EnquiryModal';
 import chefJacketWhite from '@/assets/partridge-linen-kitchen-chef-jacket-white.webp';
 import chefJacketBlack from '@/assets/partridge-linen-kitchen-chef-jacket-black.webp';
 import chefJacketShortWhite from '@/assets/partridge-linen-kitchen-chef-jacket-short-white.webp';
@@ -228,18 +227,14 @@ const Kitchen = () => {
       </main>
 
       <Footer onEmailClick={() => setIsEnquiryOpen(true)} />
-      {isEnquiryOpen && (
-        <Suspense fallback={<ModalSkeleton type="form" />}>
-          <EnquiryModal
-            isOpen={isEnquiryOpen}
-            onClose={() => {
-              setIsEnquiryOpen(false);
-              setSelectedProduct(null);
-            }}
-            productName={selectedProduct || undefined}
-          />
-        </Suspense>
-      )}
+      <EnquiryModal
+        isOpen={isEnquiryOpen}
+        onClose={() => {
+          setIsEnquiryOpen(false);
+          setSelectedProduct(null);
+        }}
+        productName={selectedProduct || undefined}
+      />
     </div>
   );
 };
