@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { Phone, Mail, MapPin, Clock, MessageCircle, Calendar } from 'lucide-react';
@@ -203,6 +204,11 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Contact Partridge Linen | London Linen Hire Enquiries</title>
+        <meta name="description" content="Contact Partridge Linen for commercial linen hire across London & South East. Call 020 8653 6066 or visit us at 99 Beddington Lane, Croydon CR0 4TD." />
+        <link rel="canonical" href="https://partridgelinen.com/contact" />
+      </Helmet>
       <Navigation />
       
       {/* Hero Section with Contact Form and Methods */}
