@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { Sparkles, Users, ArrowRight, Home, FileCheck } from 'lucide-react';
+import { Sparkles, Users, Home } from 'lucide-react';
 import heroImage from '@/assets/partridge-linen-homepage-hero-silver-damask.webp';
 const Hero = () => {
   const [isLoading, setIsLoading] = useState(true);

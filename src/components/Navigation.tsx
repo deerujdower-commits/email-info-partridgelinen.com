@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { Menu, X, ClipboardList, Phone, ChevronDown, Mail, MapPin, Utensils, Building2, ChefHat, PartyPopper } from 'lucide-react';
+import { Menu, X, ClipboardList, Phone, ChevronDown, Utensils, Building2, ChefHat, PartyPopper } from 'lucide-react';
 import { useEnquiry } from '@/contexts/EnquiryContext';
 
 const Navigation = () => {
