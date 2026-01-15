@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import EnquiryModal from '@/components/EnquiryModal';
@@ -9,6 +10,11 @@ const PrivacyPolicy = () => {
   const [isEnquiryOpen, setIsEnquiryOpen] = useState(false);
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Privacy Policy | Partridge Linen</title>
+        <meta name="description" content="Partridge Linen privacy policy. Learn how we collect, use, and protect your personal information." />
+        <link rel="canonical" href="https://partridgelinen.com/privacy-policy" />
+      </Helmet>
       <Navigation />
       
       <main className="pt-32 pb-12">

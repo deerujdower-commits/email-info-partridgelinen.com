@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import EnquiryModal from '@/components/EnquiryModal';
@@ -9,6 +10,11 @@ const CookiePolicy = () => {
   const [isEnquiryOpen, setIsEnquiryOpen] = useState(false);
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Cookie Policy | Partridge Linen</title>
+        <meta name="description" content="Partridge Linen cookie policy. Understand how we use cookies and similar technologies on our website." />
+        <link rel="canonical" href="https://partridgelinen.com/cookie-policy" />
+      </Helmet>
       <Navigation />
       
       <main className="pt-32 pb-12">
