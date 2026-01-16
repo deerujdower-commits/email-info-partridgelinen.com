@@ -65,6 +65,74 @@ const Kitchen = () => {
         <title>Chef Uniforms & Kitchen Linen Hire | Partridge Linen London</title>
         <meta name="description" content="Professional chef jackets, trousers, aprons & kitchen cloths for restaurants and commercial kitchens. Hand-pressed quality across London & South East." />
         <link rel="canonical" href="https://partridgelinen.com/kitchen" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Chef Uniforms & Kitchen Linen Hire",
+            "description": "Professional chef jackets, trousers, aprons and kitchen cloths for restaurants and commercial kitchens. Hand-pressed quality across London and the South East.",
+            "provider": {
+              "@type": "LocalBusiness",
+              "name": "Partridge Linen",
+              "telephone": "+44-20-8653-6066",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "1-5 The Drive",
+                "addressLocality": "Thornton Heath",
+                "addressRegion": "Greater London",
+                "postalCode": "CR7 8LB",
+                "addressCountry": "GB"
+              }
+            },
+            "areaServed": {
+              "@type": "GeoCircle",
+              "geoMidpoint": {
+                "@type": "GeoCoordinates",
+                "latitude": "51.5074",
+                "longitude": "-0.1278"
+              },
+              "geoRadius": "80000"
+            },
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Chef Wear & Kitchen Linen",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Product",
+                    "name": "Chef Jackets",
+                    "description": "Professional chef jackets in white and black, long and short sleeve options"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Product",
+                    "name": "Chef Trousers",
+                    "description": "Professional chef trousers in check and black styles"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Product",
+                    "name": "Kitchen Aprons",
+                    "description": "Professional aprons including butcher's, black and white styles"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Product",
+                    "name": "Kitchen Cloths",
+                    "description": "Professional kitchen cloths including Wonderdry, herringbone, microfibre, oven and glass cloths"
+                  }
+                }
+              ]
+            }
+          })}
+        </script>
       </Helmet>
       <Navigation />
       

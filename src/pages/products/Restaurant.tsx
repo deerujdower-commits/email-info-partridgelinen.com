@@ -145,6 +145,74 @@ const Restaurant = () => {
         <title>Restaurant Linen Hire London | Tablecloths & Napkins | Partridge Linen</title>
         <meta name="description" content="Premium restaurant linen hire across London & South East. Tablecloths, napkins, chef uniforms & kitchen linen for fine dining and hospitality." />
         <link rel="canonical" href="https://partridgelinen.com/restaurant" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Restaurant Linen Hire",
+            "description": "Premium restaurant linen hire service including tablecloths, napkins, chef uniforms and kitchen linen for fine dining establishments across London and the South East.",
+            "provider": {
+              "@type": "LocalBusiness",
+              "name": "Partridge Linen",
+              "telephone": "+44-20-8653-6066",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "1-5 The Drive",
+                "addressLocality": "Thornton Heath",
+                "addressRegion": "Greater London",
+                "postalCode": "CR7 8LB",
+                "addressCountry": "GB"
+              }
+            },
+            "areaServed": {
+              "@type": "GeoCircle",
+              "geoMidpoint": {
+                "@type": "GeoCoordinates",
+                "latitude": "51.5074",
+                "longitude": "-0.1278"
+              },
+              "geoRadius": "80000"
+            },
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Restaurant Linen Products",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Product",
+                    "name": "Restaurant Tablecloths",
+                    "description": "Classic tablecloths in any colour, supplied in durable polyester or premium cotton"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Product",
+                    "name": "Cloth Napkins",
+                    "description": "Premium cloth napkins in polyester or cotton with crisp professional finish"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Product",
+                    "name": "Chef Uniforms",
+                    "description": "Professional chef jackets, trousers, and aprons for commercial kitchens"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Product",
+                    "name": "Kitchen Linen",
+                    "description": "Professional kitchen towels and cloths for commercial use"
+                  }
+                }
+              ]
+            }
+          })}
+        </script>
       </Helmet>
       <Navigation />
       

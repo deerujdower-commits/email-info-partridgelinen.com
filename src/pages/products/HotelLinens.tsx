@@ -64,6 +64,58 @@ const HotelLinens = () => {
         <title>Hotel Linen Hire London | Bed Sheets & Towels | Partridge Linen</title>
         <meta name="description" content="Professional hotel linen hire across London & South East. Premium bed sheets, duvet covers, pillowcases & bath towels for hotels, B&Bs, and Airbnbs." />
         <link rel="canonical" href="https://partridgelinen.com/hotel-linens" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Hotel Linen Hire",
+            "description": "Professional hotel linen hire service including premium bed sheets, duvet covers, pillowcases and bath towels for hotels, B&Bs and Airbnbs across London and the South East.",
+            "provider": {
+              "@type": "LocalBusiness",
+              "name": "Partridge Linen",
+              "telephone": "+44-20-8653-6066",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "1-5 The Drive",
+                "addressLocality": "Thornton Heath",
+                "addressRegion": "Greater London",
+                "postalCode": "CR7 8LB",
+                "addressCountry": "GB"
+              }
+            },
+            "areaServed": {
+              "@type": "GeoCircle",
+              "geoMidpoint": {
+                "@type": "GeoCoordinates",
+                "latitude": "51.5074",
+                "longitude": "-0.1278"
+              },
+              "geoRadius": "80000"
+            },
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Hotel Linen Products",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Product",
+                    "name": "Bed Linens",
+                    "description": "Premium bed sheets, duvet covers, and pillowcases for ultimate guest comfort"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Product",
+                    "name": "Bath Towels",
+                    "description": "Soft, absorbent towels including bath sheets, hand towels, and face cloths"
+                  }
+                }
+              ]
+            }
+          })}
+        </script>
       </Helmet>
       <Navigation />
       
