@@ -305,6 +305,74 @@ const Events = () => {
         <title>Event Linen Hire London | Wedding & Party Tablecloths | Partridge Linen</title>
         <meta name="description" content="Premium event linen hire for weddings, parties & corporate events. Damask tablecloths, chair covers & napkins in 15+ colours. London & South East delivery." />
         <link rel="canonical" href="https://partridgelinen.com/events" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Event Linen Hire",
+            "description": "Premium event linen hire for weddings, parties and corporate events. Damask tablecloths, chair covers and napkins in 15+ colours with London and South East delivery.",
+            "provider": {
+              "@type": "LocalBusiness",
+              "name": "Partridge Linen",
+              "telephone": "+44-20-8653-6066",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "1-5 The Drive",
+                "addressLocality": "Thornton Heath",
+                "addressRegion": "Greater London",
+                "postalCode": "CR7 8LB",
+                "addressCountry": "GB"
+              }
+            },
+            "areaServed": {
+              "@type": "GeoCircle",
+              "geoMidpoint": {
+                "@type": "GeoCoordinates",
+                "latitude": "51.5074",
+                "longitude": "-0.1278"
+              },
+              "geoRadius": "80000"
+            },
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Event Linen Products",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Product",
+                    "name": "Damask Tablecloths",
+                    "description": "Elegant damask tablecloths in 15+ colours for weddings and events"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Product",
+                    "name": "Classic Tablecloths",
+                    "description": "Plain tablecloths in white, ivory, black and red for events"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Product",
+                    "name": "Chair Covers",
+                    "description": "Elegant chair covers in white and black with optional sashes"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Product",
+                    "name": "Napkins",
+                    "description": "Quality napkins in damask and classic styles to match tablecloths"
+                  }
+                }
+              ]
+            }
+          })}
+        </script>
       </Helmet>
       <Navigation />
 
