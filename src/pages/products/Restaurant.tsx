@@ -76,7 +76,7 @@ const Restaurant = () => {
     'kitchen-linen': {
       id: 6,
       title: 'Kitchen Linen',
-      description: 'Professional kitchen towels and cloths in various patterns and colors for commercial and domestic use.',
+      description: 'Professional kitchen towels and cloths in various patterns and colours for commercial and domestic use.',
       images: [kitchenClothWonderdryGreen, kitchenClothHerringboneGreen, kitchenClothHerringboneBlue, kitchenClothMicrofibre, kitchenClothOven, kitchenClothGlass, kitchenClothPolishing],
       slug: 'kitchen-linen'
     },
