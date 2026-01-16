@@ -146,6 +146,26 @@ const Enquiry = () => {
           <title>Enquiry Basket | Partridge Linen</title>
           <meta name="description" content="Review your linen hire enquiry basket. Request quotes for tablecloths, napkins, chair covers & event linens from Partridge Linen." />
           <link rel="canonical" href="https://partridgelinen.com/enquiry" />
+          <script type="application/ld+json">
+            {JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://partridgelinen.com/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Enquiry Basket",
+                  "item": "https://partridgelinen.com/enquiry"
+                }
+              ]
+            })}
+          </script>
         </Helmet>
         <Navigation />
         <main className="pt-32 pb-12">
@@ -259,6 +279,26 @@ const Enquiry = () => {
         <title>Enquiry Basket | Partridge Linen</title>
         <meta name="description" content="Review your linen hire enquiry basket. Request quotes for tablecloths, napkins, chair covers & event linens from Partridge Linen." />
         <link rel="canonical" href="https://partridgelinen.com/enquiry" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://partridgelinen.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Enquiry Basket",
+                "item": "https://partridgelinen.com/enquiry"
+              }
+            ]
+          })}
+        </script>
       </Helmet>
       <Navigation />
       

@@ -14,6 +14,26 @@ const PrivacyPolicy = () => {
         <title>Privacy Policy | Partridge Linen</title>
         <meta name="description" content="Partridge Linen privacy policy. Learn how we collect, use, and protect your personal information." />
         <link rel="canonical" href="https://partridgelinen.com/privacy-policy" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://partridgelinen.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Privacy Policy",
+                "item": "https://partridgelinen.com/privacy-policy"
+              }
+            ]
+          })}
+        </script>
       </Helmet>
       <Navigation />
       

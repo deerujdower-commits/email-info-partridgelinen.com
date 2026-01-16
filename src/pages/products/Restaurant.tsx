@@ -148,6 +148,26 @@ const Restaurant = () => {
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://partridgelinen.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Restaurant Linen Hire",
+                "item": "https://partridgelinen.com/restaurant"
+              }
+            ]
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
             "@type": "Service",
             "name": "Restaurant Linen Hire",
             "description": "Premium restaurant linen hire service including tablecloths, napkins, chef uniforms and kitchen linen for fine dining establishments across London and the South East.",

@@ -68,6 +68,26 @@ const Kitchen = () => {
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://partridgelinen.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Chef Uniforms & Kitchen Linen",
+                "item": "https://partridgelinen.com/kitchen"
+              }
+            ]
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
             "@type": "Service",
             "name": "Chef Uniforms & Kitchen Linen Hire",
             "description": "Professional chef jackets, trousers, aprons and kitchen cloths for restaurants and commercial kitchens. Hand-pressed quality across London and the South East.",
@@ -118,7 +138,7 @@ const Kitchen = () => {
                   "itemOffered": {
                     "@type": "Product",
                     "name": "Kitchen Aprons",
-                    "description": "Professional aprons including butcher's, black and white styles"
+                    "description": "Professional kitchen aprons including butchers, black, and white styles"
                   }
                 },
                 {

@@ -67,6 +67,26 @@ const HotelLinens = () => {
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://partridgelinen.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Hotel Linen Hire",
+                "item": "https://partridgelinen.com/hotel-linens"
+              }
+            ]
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
             "@type": "Service",
             "name": "Hotel Linen Hire",
             "description": "Professional hotel linen hire service including premium bed sheets, duvet covers, pillowcases and bath towels for hotels, B&Bs and Airbnbs across London and the South East.",
