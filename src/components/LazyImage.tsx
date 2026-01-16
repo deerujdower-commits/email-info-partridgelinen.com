@@ -11,6 +11,8 @@ interface LazyImageProps {
   onMouseLeave?: () => void;
   draggable?: boolean;
   priority?: boolean;
+  width?: number;
+  height?: number;
 }
 
 const LazyImage = memo(({
@@ -23,6 +25,8 @@ const LazyImage = memo(({
   onMouseLeave,
   draggable = true,
   priority = false,
+  width,
+  height,
 }: LazyImageProps) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(priority);
@@ -76,6 +80,8 @@ const LazyImage = memo(({
           draggable={draggable}
           loading={priority ? 'eager' : 'lazy'}
           decoding="async"
+          width={width}
+          height={height}
         />
       )}
     </div>
