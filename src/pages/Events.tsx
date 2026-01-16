@@ -393,6 +393,62 @@ const Events = () => {
             }
           })}
         </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is the lead time for placing an order?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "We recommend submitting your order at least 5 working days prior to your event date. While same-week orders can often be accommodated, we must check stock availability before confirming."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What are the collection and delivery options?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Collection and return are free from our premises in Thornton Heath, Croydon. If you require delivery, you can request this option at checkout. Your invoice will be sent within one working day, giving us time to check stock and give an accurate delivery quote for your location."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How does the refundable damage deposit work?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "A fully refundable deposit is required for all hire items. The deposit is returned after items are checked at our premises. Classic Tablecloths require £8.00 deposit (except 54\" x 54\" which is £4.00), Classic Napkins have deposit same as hire price, Damask Tablecloths require £12.50 deposit, and Damask Napkins require £1.00 deposit. Deductions apply for permanent stains, burns, tears, chemical damage, or stubborn chewing gum."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the standard hire period?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Our standard hire period is 3 days. If you need the items for longer, please let us know and we can arrange an extended hire."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "When will I receive my invoice/payment link?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Your full invoice, including any delivery charges, will be emailed to you within one working day of placing your order. This gives us time to check stock and give an accurate delivery quote for your location. A SumUp payment link will be included in the email, allowing you to pay securely by credit or debit card."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Do I need to wash the items before returning?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No, you don't need to wash the items. Simply return them in a bag or box. We handle all the cleaning professionally."
+                }
+              }
+            ]
+          })}
+        </script>
       </Helmet>
       <Navigation />
 
