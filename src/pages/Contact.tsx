@@ -208,6 +208,26 @@ const Contact = () => {
         <title>Contact Partridge Linen | London Linen Hire Enquiries</title>
         <meta name="description" content="Contact Partridge Linen for commercial linen hire across London & South East. Call 020 8653 6066 or visit us at 99 Beddington Lane, Croydon CR0 4TD." />
         <link rel="canonical" href="https://partridgelinen.com/contact" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://partridgelinen.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Contact",
+                "item": "https://partridgelinen.com/contact"
+              }
+            ]
+          })}
+        </script>
       </Helmet>
       <Navigation />
       

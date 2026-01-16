@@ -308,6 +308,26 @@ const Events = () => {
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://partridgelinen.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Event Linen Hire",
+                "item": "https://partridgelinen.com/events"
+              }
+            ]
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
             "@type": "Service",
             "name": "Event Linen Hire",
             "description": "Premium event linen hire for weddings, parties and corporate events. Damask tablecloths, chair covers and napkins in 15+ colours with London and South East delivery.",
@@ -358,7 +378,7 @@ const Events = () => {
                   "itemOffered": {
                     "@type": "Product",
                     "name": "Chair Covers",
-                    "description": "Elegant chair covers in white and black with optional sashes"
+                    "description": "White and black chair covers with decorative sashes"
                   }
                 },
                 {
@@ -366,7 +386,7 @@ const Events = () => {
                   "itemOffered": {
                     "@type": "Product",
                     "name": "Napkins",
-                    "description": "Quality napkins in damask and classic styles to match tablecloths"
+                    "description": "Damask and classic napkins in matching colours"
                   }
                 }
               ]
