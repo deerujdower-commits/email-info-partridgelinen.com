@@ -299,6 +299,54 @@ const Enquiry = () => {
             ]
           })}
         </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "How does delivery pricing work?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Delivery costs are calculated based on the distance from our premises to your location. Your delivery quote will be included in your invoice, which is sent by email within one working day of your order."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can delivery be cheaper?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes! If on the date of your order we have a driver already heading in your direction, your delivery price will be reduced. We always try to consolidate routes to offer the best possible rates."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "When will I receive my invoice/payment link?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Your full invoice, including any delivery charges, will be emailed to you within one working day of placing your order. This gives us time to check stock and give an accurate delivery quote for your location. A SumUp payment link will be included in the email, allowing you to pay securely by credit or debit card."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What about collection?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Collection from our premises is always free. Simply leave the delivery checkbox unticked and we'll arrange a convenient collection time with you."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How do deposits work?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "All hire items require a fully refundable deposit, returned when items come back in good condition. Classic Tablecloths have £8 deposit (£4 for 54x54 size), Classic Napkins deposit matches hire price, Damask Napkins have £1 deposit, and Damask Tablecloths (70x144 & Round) have £12.50 deposit. Deductions apply for permanent stains, burns, tears, chemical damage, or stubborn chewing gum."
+                }
+              }
+            ]
+          })}
+        </script>
       </Helmet>
       <Navigation />
       

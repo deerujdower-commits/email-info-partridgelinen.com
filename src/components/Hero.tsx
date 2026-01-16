@@ -35,7 +35,16 @@ const Hero = () => {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <div className="h-full">
-          <img src={heroImage} alt="Elegant wedding venue with stage and premium silver damask linens" className="object-cover w-full h-full" loading="eager" fetchPriority="high" />
+          <img 
+            src={heroImage} 
+            alt="Elegant wedding venue with stage and premium silver damask linens" 
+            className="object-cover w-full h-full" 
+            loading="eager" 
+            fetchPriority="high"
+            width={1920}
+            height={1080}
+            decoding="async"
+          />
           <div className="absolute inset-0 bg-black/60" />
         </div>
       </div>

@@ -11,14 +11,18 @@
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://partridgelinen.com" />
     
+    <!-- DNS Prefetch for faster external resource loading -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    
     <!-- Google Fonts - Preload critical fonts for faster LCP -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@300;400;500;600&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
     
     <!-- Preload hero image for faster LCP -->
-    <link rel="preload" as="image" href="/src/assets/partridge-linen-homepage-hero-silver-damask.webp" type="image/webp">
+    <link rel="preload" as="image" href="/src/assets/partridge-linen-homepage-hero-silver-damask.webp" type="image/webp" fetchpriority="high">
 
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Partridge Linen - Premium Restaurant, Hotel & Event Linens" />
@@ -193,10 +197,22 @@
     </script>
 
     <!-- Additional SEO Meta Tags -->
-    <meta name="theme-color" content="#000000" />
-    <meta name="msapplication-TileColor" content="#000000" />
+    <meta name="theme-color" content="#1a2744" />
+    <meta name="msapplication-TileColor" content="#1a2744" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Partridge Linen" />
+    
+    <!-- Security Headers Hints -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    
     <link rel="icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/lovable-uploads/1fefad8d-4032-4bd1-8208-2b048542b86c.png" />
   </head>
 
   <body>

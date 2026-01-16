@@ -64,6 +64,9 @@ const Navigation = () => {
               src="/lovable-uploads/1fefad8d-4032-4bd1-8208-2b048542b86c.png" 
               alt="Partridge Linen logo - premium commercial linen hire service" 
               className="w-5 h-5 md:w-6 md:h-6 mr-2 md:mr-2 transition-all duration-300 filter brightness-0 invert opacity-90"
+              width={24}
+              height={24}
+              loading="eager"
             />
             Partridge<span className="font-body ml-1 md:ml-1 text-xs md:text-sm font-light uppercase tracking-[0.15em] text-white/60">Linen</span>
           </Link>
