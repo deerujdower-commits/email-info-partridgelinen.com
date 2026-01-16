@@ -505,7 +505,7 @@ const Enquiry = () => {
               {/* Checkout Button */}
               <div className="p-6 text-center">
                 <p className="text-white/80 font-body mb-4 text-sm">
-                  Send us your list and we'll check availability. We'll get back to you within one working day.
+                  Payment link will be sent out after checking stock within one working day.
                 </p>
                 <Button 
                   onClick={handleSubmitClick}
