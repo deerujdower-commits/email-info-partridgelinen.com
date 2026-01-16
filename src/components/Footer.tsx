@@ -108,7 +108,7 @@ const Footer = ({ onEmailClick }: FooterProps) => {
 
         {/* Bottom Bar */}
         <div className="border-t border-border mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="font-body text-sm text-muted-foreground mb-4 md:mb-0">© 2025 Partridge Laundry & Linen Hire Ltd. All rights reserved.</p>
+          <p className="font-body text-sm text-muted-foreground mb-4 md:mb-0">© {new Date().getFullYear()} Partridge Laundry & Linen Hire Ltd. All rights reserved.</p>
           <div className="flex space-x-6">
             <a href="/privacy-policy" className="font-body text-sm text-muted-foreground hover:text-primary transition-colors">
               Privacy Policy
@@ -126,6 +126,8 @@ const Footer = ({ onEmailClick }: FooterProps) => {
             alt="Partridge Linen logo - premium commercial linen hire service" 
             className="w-10 h-10 filter brightness-0 contrast-200 hover:scale-110 transition-transform duration-300"
             loading="lazy"
+            width={40}
+            height={40}
           />
         </div>
       </div>
