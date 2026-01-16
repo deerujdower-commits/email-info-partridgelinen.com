@@ -373,7 +373,7 @@ const CollectionModal = ({ isOpen, onClose, category, fromEventsPage = false }: 
       onClick={(e) => e.target === e.currentTarget && onClose()}
     >
       <div 
-        className={`bg-background border border-border rounded-lg max-w-4xl w-full my-4 lg:my-8 flex flex-col max-h-none lg:max-h-[calc(100vh-4rem)] ${isOpen ? '' : 'scale-95'}`}
+        className="bg-background border border-border rounded-lg max-w-4xl w-full my-4 lg:my-8 flex flex-col max-h-none lg:max-h-[calc(100vh-4rem)]"
       >
         {/* Header */}
         <div className="flex items-center justify-between p-4 lg:p-6 border-b border-border flex-shrink-0">
