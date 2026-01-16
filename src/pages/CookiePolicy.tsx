@@ -86,7 +86,7 @@ const CookiePolicy = () => {
                 <div>
                   <h3 className="font-medium text-foreground mb-2">Preference Cookies</h3>
                   <p className="text-foreground/80 leading-relaxed">
-                    We use Preference Cookies to remember your preferences and various settings. These cookies help us provide you with a personalized experience.
+                    We use Preference Cookies to remember your preferences and various settings. These cookies help us provide you with a personalised experience.
                   </p>
                 </div>
 

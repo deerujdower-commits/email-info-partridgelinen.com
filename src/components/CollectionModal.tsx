@@ -299,7 +299,7 @@ const CollectionModal = ({ isOpen, onClose, category, fromEventsPage = false }: 
       productName = selectedBedLinenType;
     }
     
-    let description = `${category.description}${selectedSize ? ` - Size: ${selectedSize}` : ''}${selectedColor ? ` - Color: ${selectedColor}` : ''}${selectedKitchenType ? ` - Type: ${selectedKitchenType}` : ''}${selectedBedLinenType ? ` - Type: ${selectedBedLinenType}` : ''}`;
+    let description = `${category.description}${selectedSize ? ` - Size: ${selectedSize}` : ''}${selectedColor ? ` - Colour: ${selectedColor}` : ''}${selectedKitchenType ? ` - Type: ${selectedKitchenType}` : ''}${selectedBedLinenType ? ` - Type: ${selectedBedLinenType}` : ''}`;
     
     if (fromEventsPage && selectedHireDate) {
       description += ` - Hire Date: ${format(selectedHireDate, 'PPP')}`;
@@ -498,7 +498,7 @@ const CollectionModal = ({ isOpen, onClose, category, fromEventsPage = false }: 
                         }
                       }}
                       title={color.name}
-                      aria-label={`Color: ${color.name}`}
+                      aria-label={`Colour: ${color.name}`}
                     >
                       {color.value === 'white' && (
                         <div className="w-full h-full rounded-full border border-gray-200" />
