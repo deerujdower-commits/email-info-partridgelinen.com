@@ -236,7 +236,16 @@ const Contact = () => {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <div className="h-full">
-            <img src={heroImage} alt="Elegant white tablecloths set up for event at Partridge Linen venue" className="object-cover w-full h-full" />
+            <img 
+              src={heroImage} 
+              alt="Elegant white tablecloths set up for event at Partridge Linen venue" 
+              className="object-cover w-full h-full" 
+              loading="eager"
+              fetchPriority="high"
+              width={1920}
+              height={1080}
+              decoding="async"
+            />
             <div className="absolute inset-0 bg-black/80" />
           </div>
         </div>

@@ -121,7 +121,9 @@ const ServicesSection = () => {
                       alt={`Partridge Linen ${service.title.toLowerCase()} service - ${service.description}`} 
                       loading="lazy" 
                       className="w-full h-full object-cover object-center"
-                      style={{ imageRendering: 'crisp-edges' }} 
+                      width={400}
+                      height={300}
+                      decoding="async"
                     />
                     <div className="absolute inset-0 bg-black/10" />
                     

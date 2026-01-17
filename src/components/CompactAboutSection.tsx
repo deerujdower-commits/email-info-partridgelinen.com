@@ -48,7 +48,15 @@ const CompactAboutSection = ({ onEnquireClick }: CompactAboutSectionProps) => {
           {/* Image - shown at top on mobile */}
           <div className="relative mb-6 sm:float-left sm:mr-8 sm:mb-4 w-full sm:w-1/2 lg:w-[42%]">
             <div className="relative aspect-[4/3] overflow-hidden rounded-lg">
-              <img src={laundryFacility} alt="Partridge Linen industrial laundry facility" className="w-full h-full object-cover brightness-[1.35] contrast-105" loading="lazy" />
+              <img 
+                src={laundryFacility} 
+                alt="Partridge Linen industrial laundry facility with commercial washing machines" 
+                className="w-full h-full object-cover brightness-[1.35] contrast-105" 
+                loading="lazy"
+                width={600}
+                height={450}
+                decoding="async"
+              />
               <div className="absolute -top-4 -right-4 w-24 h-24 bg-accent/20 rounded-full blur-xl" />
               <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-primary/10 rounded-full blur-2xl" />
             </div>
