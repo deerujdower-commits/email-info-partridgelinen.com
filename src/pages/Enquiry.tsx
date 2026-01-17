@@ -9,6 +9,7 @@ import { Input } from '@/components/ui/input';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Trash2, Plus, Minus, Send, X, Grid3x3, Info, Truck, ChevronDown, ChevronUp } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
+import { openMailto } from '@/lib/openMailto';
 import {
   Popover,
   PopoverContent,
@@ -112,7 +113,7 @@ const Enquiry = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Create WhatsApp message with pricing
+    // Create email body with pricing
     const itemsList = items.map(item => {
       let itemDetails = `- ${item.name} (Qty: ${item.quantity})`;
       if (item.size) itemDetails += ` - Size: ${item.size}`;
@@ -132,16 +133,19 @@ const Enquiry = () => {
     const deliveryOption = wantsDelivery 
       ? `\n\nDelivery: Yes, please quote for delivery\nDelivery Address: ${formData.address}\nPostcode: ${formData.postcode}` 
       : '\n\nDelivery: No, I will collect';
-    const message = `New Enquiry from ${formData.name}\n\nEmail: ${formData.email}\nPhone: ${formData.phone}${deliveryOption}\n\nItems Requested:\n${itemsList}${pricingSummary}`;
-    const encodedMessage = encodeURIComponent(message);
-    const whatsappUrl = `https://wa.me/442086536066?text=${encodedMessage}`;
     
-    // Open WhatsApp
-    window.open(whatsappUrl, '_blank');
+    const emailBody = `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}${deliveryOption}\n\nItems Requested:\n${itemsList}${pricingSummary}`;
+    
+    // Open email client
+    openMailto({
+      to: 'info@partridgelinen.com',
+      subject: `Linen Hire Enquiry from ${formData.name}`,
+      body: emailBody
+    });
     
     toast({
-      title: "Enquiry sent!",
-      description: "We'll get back to you as soon as possible.",
+      title: "Opening email client",
+      description: "Please send the email to complete your enquiry.",
     });
     
     // Clear form and enquiry
