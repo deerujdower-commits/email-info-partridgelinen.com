@@ -37,7 +37,8 @@ const Enquiry = () => {
     name: '',
     email: '',
     phone: '',
-    address: ''
+    address: '',
+    postcode: ''
   });
   
   // Scroll to top when component mounts
@@ -129,7 +130,7 @@ const Enquiry = () => {
     const pricingSummary = `\n\nPricing Summary:\nTotal Price: £${orderPrice.toFixed(2)}\nRefundable Deposit: £${totalDeposit.toFixed(2)}\nEstimated Total: £${(orderPrice + totalDeposit).toFixed(2)}`;
     
     const deliveryOption = wantsDelivery 
-      ? `\n\nDelivery: Yes, please quote for delivery\nDelivery Address: ${formData.address}` 
+      ? `\n\nDelivery: Yes, please quote for delivery\nDelivery Address: ${formData.address}\nPostcode: ${formData.postcode}` 
       : '\n\nDelivery: No, I will collect';
     const message = `New Enquiry from ${formData.name}\n\nEmail: ${formData.email}\nPhone: ${formData.phone}${deliveryOption}\n\nItems Requested:\n${itemsList}${pricingSummary}`;
     const encodedMessage = encodeURIComponent(message);
@@ -145,7 +146,7 @@ const Enquiry = () => {
     
     // Clear form and enquiry
     clearEnquiry();
-    setFormData({ name: '', email: '', phone: '', address: '' });
+    setFormData({ name: '', email: '', phone: '', address: '', postcode: '' });
     setShowFormModal(false);
   };
 
@@ -703,20 +704,36 @@ const Enquiry = () => {
               </div>
               
               {wantsDelivery && (
-                <div>
-                  <label htmlFor="address" className="block text-sm font-body text-foreground/80 mb-2">
-                    Delivery Address *
-                  </label>
-                  <Input
-                    id="address"
-                    type="text"
-                    value={formData.address}
-                    onChange={(e) => setFormData({ ...formData, address: e.target.value })}
-                    placeholder="Your delivery address"
-                    required
-                    className="font-body"
-                  />
-                </div>
+                <>
+                  <div>
+                    <label htmlFor="address" className="block text-sm font-body text-foreground/80 mb-2">
+                      Delivery Address *
+                    </label>
+                    <Input
+                      id="address"
+                      type="text"
+                      value={formData.address}
+                      onChange={(e) => setFormData({ ...formData, address: e.target.value })}
+                      placeholder="Street address, city"
+                      required
+                      className="font-body"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="postcode" className="block text-sm font-body text-foreground/80 mb-2">
+                      Postcode *
+                    </label>
+                    <Input
+                      id="postcode"
+                      type="text"
+                      value={formData.postcode}
+                      onChange={(e) => setFormData({ ...formData, postcode: e.target.value.toUpperCase() })}
+                      placeholder="e.g. SW1A 1AA"
+                      required
+                      className="font-body"
+                    />
+                  </div>
+                </>
               )}
               <div className="flex gap-3 pt-4">
                 <Button 
