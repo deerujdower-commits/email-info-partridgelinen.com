@@ -490,7 +490,7 @@ const Enquiry = () => {
                 <h3 className="font-display text-xl text-white mb-4">Order Summary</h3>
                 <div className="space-y-3">
                   <div className="flex justify-between items-center font-body text-white/80">
-                    <span>Hire Price ({getTotalItems()} items) <span className="text-white/60 text-sm">inc. VAT</span></span>
+                    <span>Hire Price <span className="text-white/60 text-sm">inc. VAT</span></span>
                     <span className="text-white font-medium">£{orderPrice.toFixed(2)}</span>
                   </div>
                   {totalDeposit > 0 && (
