@@ -17,8 +17,15 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <Helmet>
         <title>Partridge Linen | Premium Commercial Linen Hire London</title>
-        <meta name="description" content="Premium commercial linen services for restaurants, hotels & events across London & South East. Damask tablecloths, chef uniforms & luxury event linens. 20+ years experience." />
+        <meta name="description" content="Premium commercial linen services for restaurants, hotels & events across London & South East. Damask tablecloths, chef uniforms & luxury event linens. 30+ years experience." />
         <link rel="canonical" href="https://partridgelinen.com/" />
+        <meta property="og:title" content="Partridge Linen | Premium Commercial Linen Hire London" />
+        <meta property="og:description" content="Premium commercial linen services for restaurants, hotels & events across London & South East. 30+ years experience." />
+        <meta property="og:url" content="https://partridgelinen.com/" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Partridge Linen | Premium Commercial Linen Hire London" />
+        <meta name="twitter:description" content="Premium commercial linen services for restaurants, hotels & events across London & South East." />
       </Helmet>
       <Navigation />
       <Hero />

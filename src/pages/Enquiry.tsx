@@ -159,8 +159,9 @@ const Enquiry = () => {
       <div className="min-h-screen bg-background">
         <Helmet>
           <title>Enquiry Basket | Partridge Linen</title>
-          <meta name="description" content="Review your linen hire enquiry basket. Request quotes for tablecloths, napkins, chair covers & event linens from Partridge Linen." />
+          <meta name="description" content="Review your linen hire enquiry basket. Request quotes for tablecloths, napkins, chair covers & event linens from Partridge Linen London." />
           <link rel="canonical" href="https://partridgelinen.com/enquiry" />
+          <meta name="robots" content="noindex, follow" />
           <script type="application/ld+json">
             {JSON.stringify({
               "@context": "https://schema.org",
@@ -290,8 +291,9 @@ const Enquiry = () => {
     <div className="min-h-screen bg-background">
       <Helmet>
         <title>Enquiry Basket | Partridge Linen</title>
-        <meta name="description" content="Review your linen hire enquiry basket. Request quotes for tablecloths, napkins, chair covers & event linens from Partridge Linen." />
+        <meta name="description" content="Review your linen hire enquiry basket. Request quotes for tablecloths, napkins, chair covers & event linens from Partridge Linen London." />
         <link rel="canonical" href="https://partridgelinen.com/enquiry" />
+        <meta name="robots" content="noindex, follow" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
