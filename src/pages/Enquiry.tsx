@@ -10,11 +10,10 @@ import { Checkbox } from '@/components/ui/checkbox';
 import { Trash2, Plus, Minus, Send, X, Grid3x3, Info, Truck, ChevronDown, ChevronUp } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from '@/components/ui/tooltip';
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from '@/components/ui/popover';
 import {
   Accordion,
   AccordionContent,
@@ -205,18 +204,16 @@ const Enquiry = () => {
                   <Truck className="w-4 h-4 text-accent" />
                   I would like delivery (instead of free collection)
                 </label>
-                <TooltipProvider>
-                  <Tooltip>
-                    <TooltipTrigger asChild>
-                      <button type="button" className="text-foreground/60 hover:text-accent transition-colors">
-                        <Info className="w-4 h-4" />
-                      </button>
-                    </TooltipTrigger>
-                    <TooltipContent className="max-w-xs">
-                      <p className="text-sm">Delivery price is calculated based on distance and route availability. See FAQ below for details.</p>
-                    </TooltipContent>
-                  </Tooltip>
-                </TooltipProvider>
+                <Popover>
+                  <PopoverTrigger asChild>
+                    <button type="button" className="text-foreground/60 hover:text-accent transition-colors">
+                      <Info className="w-4 h-4" />
+                    </button>
+                  </PopoverTrigger>
+                  <PopoverContent className="max-w-xs text-sm">
+                    Delivery price is calculated based on distance and route availability. See FAQ below for details.
+                  </PopoverContent>
+                </Popover>
               </div>
               {!wantsDelivery && (
                 <p className="text-sm text-foreground/60 font-body mt-2 ml-8">
@@ -492,18 +489,16 @@ const Enquiry = () => {
                     <div className="flex justify-between items-center font-body">
                       <div className="flex items-center gap-2">
                         <span className="text-white/80">Refundable Deposit</span>
-                        <TooltipProvider delayDuration={0}>
-                          <Tooltip>
-                            <TooltipTrigger asChild>
-                              <button type="button" className="text-white/60 hover:text-white transition-colors">
-                                <Info className="w-4 h-4" />
-                              </button>
-                            </TooltipTrigger>
-                            <TooltipContent className="max-w-xs" side="top">
-                              <p className="text-sm">Deposit is fully refundable when items are returned in good condition. See FAQ below for details.</p>
-                            </TooltipContent>
-                          </Tooltip>
-                        </TooltipProvider>
+                        <Popover>
+                          <PopoverTrigger asChild>
+                            <button type="button" className="text-white/60 hover:text-white transition-colors">
+                              <Info className="w-4 h-4" />
+                            </button>
+                          </PopoverTrigger>
+                          <PopoverContent className="max-w-xs text-sm" side="top">
+                            Deposit is fully refundable when items are returned in good condition. See FAQ below for details.
+                          </PopoverContent>
+                        </Popover>
                       </div>
                       <span className="text-white font-medium">£{totalDeposit.toFixed(2)}</span>
                     </div>
@@ -530,18 +525,16 @@ const Enquiry = () => {
                     <Truck className="w-4 h-4" />
                     I would like delivery (instead of free collection)
                   </label>
-                  <TooltipProvider delayDuration={0}>
-                    <Tooltip>
-                      <TooltipTrigger asChild>
-                        <button type="button" className="text-white/60 hover:text-white transition-colors">
-                          <Info className="w-4 h-4" />
-                        </button>
-                      </TooltipTrigger>
-                      <TooltipContent className="max-w-xs" side="top">
-                        <p className="text-sm">Delivery price is calculated based on distance and route availability. See FAQ below for details.</p>
-                      </TooltipContent>
-                    </Tooltip>
-                  </TooltipProvider>
+                  <Popover>
+                    <PopoverTrigger asChild>
+                      <button type="button" className="text-white/60 hover:text-white transition-colors">
+                        <Info className="w-4 h-4" />
+                      </button>
+                    </PopoverTrigger>
+                    <PopoverContent className="max-w-xs text-sm" side="top">
+                      Delivery price is calculated based on distance and route availability. See FAQ below for details.
+                    </PopoverContent>
+                  </Popover>
                 </div>
                 {!wantsDelivery && (
                   <p className="text-sm text-white/60 font-body mt-2 ml-8">
