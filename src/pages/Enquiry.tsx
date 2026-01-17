@@ -49,6 +49,14 @@ const Enquiry = () => {
     const name = item.name.toLowerCase();
     const size = item.size?.toLowerCase() || '';
     
+    // Chair covers and sashes
+    if (name.includes('chair cover sash') || name.includes('sash')) {
+      return 0.50 * item.quantity; // Chair sash: £0.50 deposit
+    }
+    if (name.includes('chair cover')) {
+      return 1.00 * item.quantity; // Chair cover: £1 deposit
+    }
+    
     // Damask items
     if (name.includes('damask')) {
       if (name.includes('napkin')) {
@@ -73,7 +81,7 @@ const Enquiry = () => {
       return 8.00 * item.quantity; // Other classic tablecloths: £8 deposit
     }
     
-    // Default deposit for other items (chair covers, sashes, etc.)
+    // Default deposit for other items
     return 0;
   };
 
@@ -338,7 +346,7 @@ const Enquiry = () => {
                 "name": "How do deposits work?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "All hire items require a fully refundable deposit, returned when items come back in good condition. Classic Tablecloths have £8 deposit (£4 for 54x54 size), Classic Napkins deposit matches hire price, Damask Napkins have £1 deposit, and Damask Tablecloths (70x144 & Round) have £12.50 deposit. Deductions apply for permanent stains, burns, tears, chemical damage, or stubborn chewing gum."
+                  "text": "All hire items require a fully refundable deposit, returned when items come back in good condition. Classic Tablecloths have £8 deposit (£4 for 54x54 size), Classic Napkins deposit matches hire price, Damask Napkins have £1 deposit, Damask Tablecloths (70x144 & Round) have £12.50 deposit, Chair Covers have £1 deposit, and Chair Sashes have £0.50 deposit. Deductions apply for permanent stains, burns, tears, chemical damage, or stubborn chewing gum."
                 }
               }
             ]
@@ -610,6 +618,8 @@ const Enquiry = () => {
                     <li><strong>Classic Napkins:</strong> Deposit matches the hire price</li>
                     <li><strong>Damask Napkins:</strong> £1 deposit</li>
                     <li><strong>Damask Tablecloths (70x144 & Round):</strong> £12.50 deposit</li>
+                    <li><strong>Chair Covers:</strong> £1 deposit</li>
+                    <li><strong>Chair Sashes:</strong> £0.50 deposit</li>
                   </ul>
                   <p className="font-medium text-foreground mb-2">Deposit deductions apply for:</p>
                   <ul className="list-disc list-inside space-y-1">
