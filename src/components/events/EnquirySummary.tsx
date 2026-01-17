@@ -1,14 +1,16 @@
 import { ShoppingBag, X, ChevronRight } from 'lucide-react';
 import { useEnquiry } from '@/contexts/EnquiryContext';
 import { Button } from '@/components/ui/button';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 const EnquirySummary = () => {
   const { items, getTotalItems, removeItem } = useEnquiry();
   const navigate = useNavigate();
+  const location = useLocation();
   const totalItems = getTotalItems();
 
-  if (totalItems === 0) return null;
+  // Hide on enquiry page to avoid blocking navigation
+  if (totalItems === 0 || location.pathname === '/enquiry') return null;
 
   return (
     <div className="fixed bottom-4 left-0 right-0 mx-auto sm:left-auto sm:right-4 sm:mx-0 z-50 max-w-sm w-[calc(100%-2rem)] sm:w-auto">
