@@ -144,8 +144,8 @@ const Enquiry = () => {
     });
     
     toast({
-      title: "Opening email client",
-      description: "Please send the email to complete your enquiry.",
+      title: "Your enquiry has been prepared!",
+      description: "Please click 'Send' in your email app to complete.",
     });
     
     // Clear form and enquiry
