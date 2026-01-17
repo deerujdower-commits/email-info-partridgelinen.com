@@ -1,4 +1,5 @@
 import { Clock, Phone, Mail, MapPin } from 'lucide-react';
+import LazyMap from './LazyMap';
 
 interface FooterProps {
   onEmailClick?: () => void;
@@ -90,18 +91,11 @@ const Footer = ({ onEmailClick }: FooterProps) => {
             {/* Map */}
             <div>
               <h3 className="font-display font-semibold text-foreground mb-4">Find Us</h3>
-              <div className="rounded-lg overflow-hidden border border-border">
-                <iframe
-                  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=1-5+The+Drive,+CR7+8LB,+UK"
-                  width="100%"
-                  height="150"
-                  style={{ border: 0 }}
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  title="Partridge Laundry Location"
-                />
-              </div>
+              <LazyMap 
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=1-5+The+Drive,+CR7+8LB,+UK"
+                title="Partridge Laundry Location"
+                height={150}
+              />
             </div>
           </div>
         </div>
