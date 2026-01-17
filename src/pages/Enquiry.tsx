@@ -489,14 +489,14 @@ const Enquiry = () => {
               <div className="p-6 border-b border-white/20">
                 <h3 className="font-display text-xl text-white mb-4">Order Summary</h3>
                 <div className="space-y-3">
-                  <div className="flex justify-between items-center font-body text-white/80">
-                    <span>Total Price ({getTotalItems()} items)</span>
-                    <span className="text-white font-medium">£{orderPrice.toFixed(2)}</span>
+                  <div className="flex justify-between items-center font-body">
+                    <span className="text-white/80">Total ({getTotalItems()} items) <span className="text-white/60 text-sm">inc. VAT</span></span>
+                    <span className="text-white font-display text-2xl">£{orderPrice.toFixed(2)}</span>
                   </div>
                   {totalDeposit > 0 && (
-                    <div className="flex justify-between items-center font-body">
+                    <div className="flex justify-between items-center font-body border-t border-white/20 pt-3">
                       <div className="flex items-center gap-2">
-                        <span className="text-white/80">Refundable Deposit</span>
+                        <span className="text-white/80">Refundable Deposit <span className="text-white/60 text-sm">(VAT free)</span></span>
                         <Popover>
                           <PopoverTrigger asChild>
                             <button type="button" className="text-white/60 hover:text-white transition-colors">
@@ -511,12 +511,6 @@ const Enquiry = () => {
                       <span className="text-white font-medium">£{totalDeposit.toFixed(2)}</span>
                     </div>
                   )}
-                  <div className="border-t border-white/20 pt-3 mt-3">
-                    <div className="flex justify-between items-center font-body">
-                      <span className="text-white font-medium">Estimated Total</span>
-                      <span className="text-white font-display text-2xl">£{(orderPrice + totalDeposit).toFixed(2)}</span>
-                    </div>
-                  </div>
                 </div>
               </div>
 
