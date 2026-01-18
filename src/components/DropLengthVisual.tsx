@@ -10,7 +10,7 @@ const dropLengths = [
     name: "To the Floor",
     measurement: '30"',
     description: "Elegant formal look, covers table legs completely",
-    dropHeight: "h-36",
+    dropHeight: "h-[140px]",
     perfectFor: "Weddings, galas, formal dining",
     color: "from-accent via-accent/60 to-accent/40",
   },
