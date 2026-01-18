@@ -236,7 +236,7 @@ const Enquiry = () => {
                     </button>
                   </PopoverTrigger>
                   <PopoverContent className="max-w-xs text-sm">
-                    Delivery price is calculated based on distance and route availability. See FAQ below for details.
+                    Delivery and pickup are both charged based on distance. See FAQ below for details.
                   </PopoverContent>
                 </Popover>
               </div>
@@ -259,7 +259,7 @@ const Enquiry = () => {
                     How does delivery pricing work?
                   </AccordionTrigger>
                   <AccordionContent className="text-foreground/70 font-body text-left">
-                    Delivery costs are calculated based on the distance from our premises to your location. Your delivery quote will be included in your invoice, which is sent by email within one working day of your order.
+                    Delivery and pickup are both available for an additional charge, calculated based on the distance from our premises to your location. You can request these options at checkout and the charges will be added to your invoice before the payment link is sent.
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="reduced-price" className="border-border">
@@ -275,15 +275,15 @@ const Enquiry = () => {
                     When will I receive my invoice/payment link?
                   </AccordionTrigger>
                   <AccordionContent className="text-foreground/70 font-body text-left">
-                    Your full invoice, including any delivery charges, will be emailed to you within one working day of placing your order. This gives us time to check stock and give an accurate delivery quote for your location. A SumUp payment link will be included in the email, allowing you to pay securely by credit or debit card.
+                    Your full invoice, including any delivery and pickup charges, will be emailed to you within one working day of placing your order. This gives us time to check stock and provide accurate quotes for your location. A SumUp payment link will be included in the email, allowing you to pay securely by credit or debit card.
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="free-collection" className="border-border">
                 <AccordionTrigger className="font-body text-foreground hover:text-accent text-left">
-                    What about collection and pickup?
+                    What about collection?
                   </AccordionTrigger>
                   <AccordionContent className="text-foreground/70 font-body text-left">
-                    Collection and return to our premises is always free. If you choose delivery, you can also request pickup after your event. Pickup is an additional charge calculated based on distance, and will be added to your invoice before the payment link is sent.
+                    Collection and return to our premises in Thornton Heath, Croydon is always free.
                   </AccordionContent>
                 </AccordionItem>
               </Accordion>
@@ -332,7 +332,7 @@ const Enquiry = () => {
                 "name": "How does delivery pricing work?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Delivery costs are calculated based on the distance from our premises to your location. Your delivery quote will be included in your invoice, which is sent by email within one working day of your order."
+                  "text": "Delivery and pickup are both available for an additional charge, calculated based on the distance from our premises to your location. You can request these options at checkout and the charges will be added to your invoice before the payment link is sent."
                 }
               },
               {
@@ -348,15 +348,15 @@ const Enquiry = () => {
                 "name": "When will I receive my invoice/payment link?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Your full invoice, including any delivery charges, will be emailed to you within one working day of placing your order. This gives us time to check stock and give an accurate delivery quote for your location. A SumUp payment link will be included in the email, allowing you to pay securely by credit or debit card."
+                  "text": "Your full invoice, including any delivery and pickup charges, will be emailed to you within one working day of placing your order. This gives us time to check stock and provide accurate quotes for your location. A SumUp payment link will be included in the email, allowing you to pay securely by credit or debit card."
                 }
               },
               {
                 "@type": "Question",
-                "name": "What about collection and pickup?",
+                "name": "What about collection?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Collection and return to our premises is always free. If you choose delivery, you can also request pickup after your event. Pickup is an additional charge calculated based on distance, and will be added to your invoice before the payment link is sent."
+                  "text": "Collection and return to our premises in Thornton Heath, Croydon is always free."
                 }
               },
               {
@@ -561,7 +561,7 @@ const Enquiry = () => {
                       </button>
                     </PopoverTrigger>
                     <PopoverContent className="max-w-xs text-sm" side="top">
-                      Delivery price is calculated based on distance and route availability. See FAQ below for details.
+                      Delivery and pickup are both charged based on distance. See FAQ below for details.
                     </PopoverContent>
                   </Popover>
                 </div>
@@ -619,7 +619,7 @@ const Enquiry = () => {
                   How does delivery pricing work?
                 </AccordionTrigger>
                 <AccordionContent className="text-foreground/70 font-body text-left">
-                  Delivery costs are calculated based on the distance from our premises to your location. Your delivery quote will be included in your invoice, which is sent by email within one working day of your order.
+                  Delivery and pickup are both available for an additional charge, calculated based on the distance from our premises to your location. You can request these options at checkout and the charges will be added to your invoice before the payment link is sent.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="reduced-price" className="border-border">
@@ -635,15 +635,15 @@ const Enquiry = () => {
                   When will I receive my invoice/payment link?
                 </AccordionTrigger>
                 <AccordionContent className="text-foreground/70 font-body text-left">
-                  Your full invoice, including any delivery charges, will be emailed to you within one working day of placing your order. This gives us time to check stock and give an accurate delivery quote for your location. A SumUp payment link will be included in the email, allowing you to pay securely by credit or debit card.
+                  Your full invoice, including any delivery and pickup charges, will be emailed to you within one working day of placing your order. This gives us time to check stock and provide accurate quotes for your location. A SumUp payment link will be included in the email, allowing you to pay securely by credit or debit card.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="free-collection" className="border-border">
                 <AccordionTrigger className="font-body text-foreground hover:text-accent text-left">
-                  What about collection and pickup?
+                  What about collection?
                 </AccordionTrigger>
                 <AccordionContent className="text-foreground/70 font-body text-left">
-                  Collection and return to our premises is always free. If you choose delivery, you can also request pickup after your event. Pickup is an additional charge calculated based on distance, and will be added to your invoice before the payment link is sent.
+                  Collection and return to our premises in Thornton Heath, Croydon is always free.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="deposit-info" className="border-border">
