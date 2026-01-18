@@ -83,11 +83,11 @@ export const DropLengthVisual = ({ className }: DropLengthVisualProps) => {
                     {/* Draping folds effect */}
                     <div className="absolute inset-x-0 top-0 h-8 bg-gradient-to-b from-black/5 to-transparent" />
                     
-                    {/* Drop measurement indicator - centered on cloth */}
+                    {/* Drop measurement indicator - full height of cloth */}
                     {drop.name !== "Trail" && (
-                      <div className="absolute top-1/2 -translate-y-1/2 -right-10 flex items-center z-30">
-                        <div className="flex items-center gap-1">
-                          <div className="w-0.5 h-8 bg-accent rounded-full shadow-sm" />
+                      <div className="absolute inset-y-0 -right-10 flex items-center z-30">
+                        <div className="flex items-center gap-1 h-full">
+                          <div className="w-0.5 h-full bg-accent rounded-full shadow-sm" />
                           <span className="text-[11px] text-accent font-bold whitespace-nowrap bg-background px-2 py-1 rounded shadow-md border border-accent/30">
                             {drop.measurement}
                           </span>
