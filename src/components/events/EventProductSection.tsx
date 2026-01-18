@@ -48,6 +48,7 @@ const EventProductSection = ({
   const [selectedColor, setSelectedColor] = useState(colors[0]);
   const [hoveredColor, setHoveredColor] = useState<ColorOption | null>(null);
   const [quantity, setQuantity] = useState(0);
+  const [showAdded, setShowAdded] = useState(false);
 
   // Get product types based on whether we have a dynamic function or static array
   const productTypes = getProductTypesForColor 
@@ -103,6 +104,10 @@ const EventProductSection = ({
     };
     
     addItem(item);
+
+    // Show checkmark feedback
+    setShowAdded(true);
+    setTimeout(() => setShowAdded(false), 1000);
 
     // Reset quantity for next addition
     setQuantity(0);
@@ -268,11 +273,15 @@ const EventProductSection = ({
           {/* Add to Enquiry */}
           <Button 
             onClick={handleAddToEnquiry} 
-            className="w-full bg-accent text-accent-foreground hover:bg-accent/90"
+            className={`w-full transition-colors ${showAdded ? 'bg-green-600 hover:bg-green-600' : 'bg-accent hover:bg-accent/90'} text-accent-foreground`}
             disabled={quantity === 0}
           >
-            <ShoppingBag className="w-4 h-4 mr-2" />
-            Add to Enquiry
+            {showAdded ? (
+              <Check className="w-4 h-4 mr-2" />
+            ) : (
+              <ShoppingBag className="w-4 h-4 mr-2" />
+            )}
+            {showAdded ? 'Added!' : 'Add to Enquiry'}
           </Button>
         </div>
       </div>
