@@ -21,6 +21,8 @@ const ChairCoversSection = () => {
   const [chairQuantity, setChairQuantity] = useState(0);
   const [sashColour, setSashColour] = useState('');
   const [sashQuantity, setSashQuantity] = useState(0);
+  const [showChairAdded, setShowChairAdded] = useState(false);
+  const [showSashAdded, setShowSashAdded] = useState(false);
 
   const chairPrice = 1.20;
   const sashPrice = 0.70;
@@ -46,6 +48,10 @@ const ChairCoversSection = () => {
       description: `${selectedChairColor.name} Chair Cover`,
       price: chairPrice,
     });
+
+    // Show checkmark feedback
+    setShowChairAdded(true);
+    setTimeout(() => setShowChairAdded(false), 1000);
 
     setChairQuantity(0);
   };
@@ -79,6 +85,10 @@ const ChairCoversSection = () => {
       price: sashPrice,
     });
     
+    // Show checkmark feedback
+    setShowSashAdded(true);
+    setTimeout(() => setShowSashAdded(false), 1000);
+
     setSashColour('');
     setSashQuantity(0);
   };
@@ -179,11 +189,15 @@ const ChairCoversSection = () => {
             <div className="mt-auto pt-4">
               <Button 
                 onClick={handleAddChairCover} 
-                className="w-full bg-accent text-accent-foreground hover:bg-accent/90"
+                className={`w-full transition-colors ${showChairAdded ? 'bg-green-600 hover:bg-green-600' : 'bg-accent hover:bg-accent/90'} text-accent-foreground`}
                 disabled={chairQuantity === 0}
               >
-                <ShoppingBag className="w-4 h-4 mr-2" />
-                Add to Enquiry
+                {showChairAdded ? (
+                  <Check className="w-4 h-4 mr-2" />
+                ) : (
+                  <ShoppingBag className="w-4 h-4 mr-2" />
+                )}
+                {showChairAdded ? 'Added!' : 'Add to Enquiry'}
               </Button>
             </div>
           </div>
@@ -263,11 +277,15 @@ const ChairCoversSection = () => {
               <div className="mt-auto pt-4">
                 <Button 
                   onClick={handleAddSash} 
-                  className="w-full bg-accent text-accent-foreground hover:bg-accent/90"
+                  className={`w-full transition-colors ${showSashAdded ? 'bg-green-600 hover:bg-green-600' : 'bg-accent hover:bg-accent/90'} text-accent-foreground`}
                   disabled={sashQuantity === 0 || !sashColour.trim()}
                 >
-                  <ShoppingBag className="w-4 h-4 mr-2" />
-                  Add to Enquiry
+                  {showSashAdded ? (
+                    <Check className="w-4 h-4 mr-2" />
+                  ) : (
+                    <ShoppingBag className="w-4 h-4 mr-2" />
+                  )}
+                  {showSashAdded ? 'Added!' : 'Add to Enquiry'}
                 </Button>
               </div>
             </div>
