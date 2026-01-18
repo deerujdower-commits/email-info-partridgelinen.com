@@ -523,16 +523,16 @@ const Events = () => {
             <ChairCoversSection />
 
             {/* Bottom Right - Gallery */}
-            <div id="event-gallery">
+            <div id="event-gallery" className="h-full">
               <div className="bg-muted/30 border border-border rounded-lg overflow-hidden h-full transition-all duration-300 hover:shadow-lg hover:border-primary/20 hover:bg-muted/40 flex flex-col">
                 <h2 className="font-display text-lg font-medium text-foreground p-4 pb-3 text-center sm:text-left">Event Gallery</h2>
                 {/* Preview grid - 3x3, no gaps, Instagram-style flush layout */}
-                <div className="grid grid-cols-3 gap-0 lg:flex-1 lg:grid-rows-3">
+                <div className="grid grid-cols-3 gap-0 flex-1 md:grid-rows-3">
                   {galleryImages.slice(0, 9).map((image, index) => (
                     <button
                       key={index}
                       onClick={() => setGalleryOpen(true)}
-                      className="relative overflow-hidden bg-muted focus:outline-none aspect-square lg:aspect-auto lg:w-full lg:h-full"
+                      className="relative overflow-hidden bg-muted focus:outline-none aspect-square md:aspect-auto md:w-full md:h-full"
                       aria-label={`View event gallery - ${image.alt}`}
                     >
                       <img 
