@@ -411,7 +411,7 @@ const Events = () => {
                 "name": "What are the collection and delivery options?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Collection and return are free from our premises in Thornton Heath, Croydon. If you require delivery, you can request this option at checkout. Your invoice will be sent within one working day, giving us time to check stock and give an accurate delivery quote for your location."
+                  "text": "Collection and return are free from our premises in Thornton Heath, Croydon. Delivery and pickup are both available for an additional charge, calculated based on distance. You can request these options at checkout and the charges will be added to your invoice before the payment link is sent."
                 }
               },
               {
@@ -589,7 +589,7 @@ const Events = () => {
                   What are the collection, delivery and pickup options?
                 </AccordionTrigger>
                 <AccordionContent className="text-foreground/70 font-body leading-relaxed text-sm">
-                  Collection and return are free from our premises in Thornton Heath, Croydon. If you require delivery, you can request this option at checkout. You can also request pickup after your event - this is an additional charge calculated based on distance, and will be added to your invoice before the payment link is sent. Your invoice will be sent within one working day, giving us time to check stock and give accurate delivery/pickup quotes for your location.
+                  Collection and return are free from our premises in Thornton Heath, Croydon. Delivery and pickup are both available for an additional charge, calculated based on distance. You can request these options at checkout and the charges will be added to your invoice before the payment link is sent. Your invoice will be sent within one working day, giving us time to check stock and provide accurate quotes for your location.
                 </AccordionContent>
               </AccordionItem>
 
@@ -631,7 +631,7 @@ const Events = () => {
                   When will I receive my invoice/payment link?
                 </AccordionTrigger>
                 <AccordionContent className="text-foreground/70 font-body leading-relaxed text-sm">
-                  Your full invoice, including any delivery charges, will be emailed to you within one working day of placing your order. This gives us time to check stock and give an accurate delivery quote for your location. A SumUp payment link will be included in the email, allowing you to pay securely by credit or debit card.
+                  Your full invoice, including any delivery and pickup charges, will be emailed to you within one working day of placing your order. This gives us time to check stock and provide accurate quotes for your location. A SumUp payment link will be included in the email, allowing you to pay securely by credit or debit card.
                 </AccordionContent>
               </AccordionItem>
 
