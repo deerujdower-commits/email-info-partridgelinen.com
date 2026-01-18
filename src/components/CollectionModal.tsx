@@ -306,6 +306,24 @@ const CollectionModal = ({ isOpen, onClose, category, fromEventsPage = false }: 
           }
         }
       }
+      // For aprons
+      else if (selectedWorkwearType === 'apron') {
+        if (category.slug === 'work-wear') {
+          if (currentImageIndex >= 14 && currentImageIndex <= 15) {
+            setSelectedColor('Butchers Stripe');
+          } else if (currentImageIndex === 16) {
+            setSelectedColor('Black');
+          } else if (currentImageIndex === 17) {
+            setSelectedColor('White');
+          }
+        } else if (category.slug === 'chef-jacket') {
+          if (currentImageIndex === 10) {
+            setSelectedColor('Black');
+          } else if (currentImageIndex === 11) {
+            setSelectedColor('White');
+          }
+        }
+      }
     }
   }, [currentImageIndex, category.slug, selectedWorkwearType]);
 
@@ -771,14 +789,48 @@ const CollectionModal = ({ isOpen, onClose, category, fromEventsPage = false }: 
                         size="sm" 
                         onClick={() => {
                           setSelectedWorkwearType('');
+                          setSelectedColor('');
                           jumpToImage(0);
                         }}
                         className="mb-3"
                       >
                         ← Back
                       </Button>
-                      <div className="p-4 bg-muted/50 rounded-lg text-center">
-                        <p className="text-sm text-foreground/80">Apron selected - One Size</p>
+                      <h4 className="text-sm font-medium text-foreground mb-3">Select Color</h4>
+                      <div className="flex gap-3 mb-4">
+                        <button
+                          onClick={() => {
+                            jumpToImage(14);
+                            setSelectedColor('Butchers Stripe');
+                          }}
+                          className="flex flex-col items-center gap-2 group"
+                        >
+                          <div className={`w-12 h-12 rounded-full border-2 transition-all ${selectedColor === 'Butchers Stripe' ? 'border-foreground ring-2 ring-foreground/20' : 'border-border'}`} style={{ background: 'repeating-linear-gradient(90deg, #1a365d, #1a365d 3px, #FFF 3px, #FFF 6px)' }}></div>
+                          <span className="text-xs text-foreground/70">Stripe</span>
+                        </button>
+                        <button
+                          onClick={() => {
+                            jumpToImage(16);
+                            setSelectedColor('Black');
+                          }}
+                          className="flex flex-col items-center gap-2 group"
+                        >
+                          <div className={`w-12 h-12 rounded-full border-2 transition-all ${selectedColor === 'Black' ? 'border-foreground ring-2 ring-foreground/20' : 'border-border'} bg-black`}></div>
+                          <span className="text-xs text-foreground/70">Black</span>
+                        </button>
+                        <button
+                          onClick={() => {
+                            jumpToImage(17);
+                            setSelectedColor('White');
+                          }}
+                          className="flex flex-col items-center gap-2 group"
+                        >
+                          <div className={`w-12 h-12 rounded-full border-2 transition-all ${selectedColor === 'White' ? 'border-foreground ring-2 ring-foreground/20' : 'border-border'} bg-white`}></div>
+                          <span className="text-xs text-foreground/70">White</span>
+                        </button>
+                      </div>
+                      <div className="p-3 bg-muted/30 rounded-lg">
+                        <p className="text-xs text-foreground/60">One Size Fits All</p>
                       </div>
                     </div>
                   )}
@@ -906,7 +958,7 @@ const CollectionModal = ({ isOpen, onClose, category, fromEventsPage = false }: 
                     </div>
                   )}
 
-                  {/* Apron - Show selection */}
+                  {/* Apron - Show color selection */}
                   {selectedWorkwearType === 'apron' && (
                     <div>
                       <Button 
@@ -914,14 +966,38 @@ const CollectionModal = ({ isOpen, onClose, category, fromEventsPage = false }: 
                         size="sm" 
                         onClick={() => {
                           setSelectedWorkwearType('');
+                          setSelectedColor('');
                           jumpToImage(0);
                         }}
                         className="mb-3"
                       >
                         ← Back
                       </Button>
-                      <div className="p-4 bg-muted/50 rounded-lg text-center">
-                        <p className="text-sm text-foreground/80">Apron selected - One Size</p>
+                      <h4 className="text-sm font-medium text-foreground mb-3">Select Color</h4>
+                      <div className="flex gap-3 mb-4">
+                        <button
+                          onClick={() => {
+                            jumpToImage(10);
+                            setSelectedColor('Black');
+                          }}
+                          className="flex flex-col items-center gap-2 group"
+                        >
+                          <div className={`w-12 h-12 rounded-full border-2 transition-all ${selectedColor === 'Black' ? 'border-foreground ring-2 ring-foreground/20' : 'border-border'} bg-black`}></div>
+                          <span className="text-xs text-foreground/70">Black</span>
+                        </button>
+                        <button
+                          onClick={() => {
+                            jumpToImage(11);
+                            setSelectedColor('White');
+                          }}
+                          className="flex flex-col items-center gap-2 group"
+                        >
+                          <div className={`w-12 h-12 rounded-full border-2 transition-all ${selectedColor === 'White' ? 'border-foreground ring-2 ring-foreground/20' : 'border-border'} bg-white`}></div>
+                          <span className="text-xs text-foreground/70">White</span>
+                        </button>
+                      </div>
+                      <div className="p-3 bg-muted/30 rounded-lg">
+                        <p className="text-xs text-foreground/60">One Size Fits All</p>
                       </div>
                     </div>
                   )}
