@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 
 import { X, ChevronLeft, ChevronRight, Minus, Plus, CalendarIcon, Bed, Ruler, Bath } from 'lucide-react';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
@@ -53,6 +53,9 @@ const CollectionModal = ({ isOpen, onClose, category, fromEventsPage = false }: 
   const { toast } = useToast();
   
   const isMobile = useIsMobile();
+  
+  // Touch swipe state for image carousel
+  const [touchStart, setTouchStart] = useState<number | null>(null);
   
 
   // Calculate tomorrow's date for minimum date selection
@@ -242,6 +245,31 @@ const CollectionModal = ({ isOpen, onClose, category, fromEventsPage = false }: 
     });
   };
 
+  // Touch swipe handlers for image carousel
+  const handleTouchStart = useCallback((e: React.TouchEvent) => {
+    setTouchStart(e.touches[0].clientX);
+  }, []);
+
+  const handleTouchMove = useCallback((e: React.TouchEvent) => {
+    if (touchStart === null) return;
+    
+    const touchEnd = e.touches[0].clientX;
+    const diff = touchStart - touchEnd;
+    
+    if (Math.abs(diff) > 50) {
+      if (diff > 0) {
+        nextImage();
+      } else {
+        prevImage();
+      }
+      setTouchStart(null);
+    }
+  }, [touchStart]);
+
+  const handleTouchEnd = useCallback(() => {
+    setTouchStart(null);
+  }, []);
+
   // Helper function to jump to a specific image (for color/type selections)
   const jumpToImage = (index: number) => {
     setCurrentImageIndex(index);
@@ -393,15 +421,21 @@ const CollectionModal = ({ isOpen, onClose, category, fromEventsPage = false }: 
           {/* Image Section */}
           <div className="lg:w-1/2 p-4 lg:p-6">
             <div className="relative">
-              {/* Main Image - optimized for performance */}
-              <div className="aspect-square rounded-lg overflow-hidden bg-muted">
+              {/* Main Image - optimized for performance with swipe support */}
+              <div 
+                className="aspect-square rounded-lg overflow-hidden bg-muted"
+                onTouchStart={handleTouchStart}
+                onTouchMove={handleTouchMove}
+                onTouchEnd={handleTouchEnd}
+              >
                 <img
                   src={currentImages[currentImageIndex]}
                   alt={`Partridge Linen ${category.title} - ${category.description} (image ${currentImageIndex + 1} of ${currentImages.length})`}
-                  className="w-full h-full object-cover will-change-transform"
+                  className="w-full h-full object-cover will-change-transform select-none"
                   loading="eager"
                   decoding="async"
                   fetchPriority="high"
+                  draggable={false}
                 />
                 {/* Preload adjacent images for smoother transitions */}
                 {currentImages.length > 1 && (
