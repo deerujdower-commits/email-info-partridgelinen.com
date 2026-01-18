@@ -23,10 +23,12 @@ const EnquiryModal = memo(({ isOpen, onClose, productName }: EnquiryModalProps) 
   const [isCopied, setIsCopied] = useState(false);
   const { toast } = useToast();
 
-  // Update message when productName changes
+  // Update message when productName changes - clear if no product context
   useEffect(() => {
     if (productName) {
       setMessage(`I would like to enquire about: ${productName}`);
+    } else {
+      setMessage('');
     }
   }, [productName]);
 
