@@ -247,15 +247,15 @@ const Enquiry = () => {
               )}
             </div>
 
-            {/* Delivery FAQ */}
+            {/* Delivery & Deposit FAQ */}
             <div className="bg-secondary/20 border border-border rounded-lg p-6">
               <h3 className="font-display text-xl text-foreground mb-4 flex items-center gap-2">
                 <Info className="w-5 h-5 text-accent" />
-                Delivery Information
+                Delivery & Deposit Information
               </h3>
               <Accordion type="single" collapsible className="w-full">
                 <AccordionItem value="how-delivery-works" className="border-border">
-                <AccordionTrigger className="font-body text-foreground hover:text-accent text-left">
+                  <AccordionTrigger className="font-body text-foreground hover:text-accent text-left">
                     How does delivery pricing work?
                   </AccordionTrigger>
                   <AccordionContent className="text-foreground/70 font-body text-left">
@@ -263,7 +263,7 @@ const Enquiry = () => {
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="reduced-price" className="border-border">
-                <AccordionTrigger className="font-body text-foreground hover:text-accent text-left">
+                  <AccordionTrigger className="font-body text-foreground hover:text-accent text-left">
                     Can delivery be cheaper?
                   </AccordionTrigger>
                   <AccordionContent className="text-foreground/70 font-body text-left">
@@ -271,7 +271,7 @@ const Enquiry = () => {
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="invoice-timing" className="border-border">
-                <AccordionTrigger className="font-body text-foreground hover:text-accent text-left">
+                  <AccordionTrigger className="font-body text-foreground hover:text-accent text-left">
                     When will I receive my invoice/payment link?
                   </AccordionTrigger>
                   <AccordionContent className="text-foreground/70 font-body text-left">
@@ -279,11 +279,35 @@ const Enquiry = () => {
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="free-collection" className="border-border">
-                <AccordionTrigger className="font-body text-foreground hover:text-accent text-left">
+                  <AccordionTrigger className="font-body text-foreground hover:text-accent text-left">
                     What about collection?
                   </AccordionTrigger>
                   <AccordionContent className="text-foreground/70 font-body text-left">
                     Collection and return to our premises in Thornton Heath, Croydon is always free.
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="deposit-info" className="border-border">
+                  <AccordionTrigger className="font-body text-foreground hover:text-accent text-left">
+                    How do deposits work?
+                  </AccordionTrigger>
+                  <AccordionContent className="text-foreground/70 font-body text-left">
+                    All hire items require a fully refundable deposit, returned when items come back in good condition. Deposit amounts vary by product type:
+                    <ul className="list-disc list-inside mt-2 space-y-1 mb-3">
+                      <li><strong>Classic Tablecloths:</strong> £8 deposit (£4 for 54x54 size)</li>
+                      <li><strong>Classic Napkins:</strong> Deposit matches the hire price</li>
+                      <li><strong>Damask Napkins:</strong> £1 deposit</li>
+                      <li><strong>Damask Tablecloths (70x144 & Round):</strong> £12.50 deposit</li>
+                      <li><strong>Chair Covers:</strong> £1 deposit</li>
+                      <li><strong>Chair Sashes:</strong> £0.50 deposit</li>
+                    </ul>
+                    <p className="font-medium text-foreground mb-2">Deposit deductions apply for:</p>
+                    <ul className="list-disc list-inside space-y-1">
+                      <li>Permanent and indelible stains</li>
+                      <li>Burns or heat damage</li>
+                      <li>Tears, holes, or fabric damage</li>
+                      <li>Chemical and mould damage</li>
+                      <li>Stubborn chewing gum</li>
+                    </ul>
                   </AccordionContent>
                 </AccordionItem>
               </Accordion>
