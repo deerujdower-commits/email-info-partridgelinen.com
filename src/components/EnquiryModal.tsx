@@ -131,7 +131,7 @@ const EnquiryModal = memo(({ isOpen, onClose, productName }: EnquiryModalProps) 
     >
       <div className="bg-background border border-border rounded-lg max-w-2xl w-full my-8 flex flex-col max-h-[calc(100vh-4rem)]">
         {/* Header */}
-        <div className="flex items-center justify-between p-6 border-b border-border flex-shrink-0">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between p-6 border-b border-border flex-shrink-0 gap-4">
           <div>
             <h2 className="text-2xl font-display text-foreground">Send Enquiry</h2>
             <p className="text-foreground/60 font-body text-sm mt-1">
@@ -145,11 +145,11 @@ const EnquiryModal = memo(({ isOpen, onClose, productName }: EnquiryModalProps) 
               </button>
             </p>
           </div>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 self-start sm:self-center">
             <Button size="sm" className="bg-accent hover:bg-accent/90 text-white" asChild>
               <a href={`tel:${phoneNumberTel}`}>
                 <Phone className="w-4 h-4 mr-1" />
-                Call
+                Call Us
               </a>
             </Button>
             <Button variant="ghost" size="icon" onClick={onClose} aria-label="Close enquiry form">
