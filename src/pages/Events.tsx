@@ -586,10 +586,10 @@ const Events = () => {
 
               <AccordionItem value="item-2">
                 <AccordionTrigger className="font-display text-sm text-left">
-                  What are the collection and delivery options?
+                  What are the collection, delivery and pickup options?
                 </AccordionTrigger>
                 <AccordionContent className="text-foreground/70 font-body leading-relaxed text-sm">
-                  Collection and return are free from our premises in Thornton Heath, Croydon. If you require delivery, you can request this option at checkout. Your invoice will be sent within one working day, giving us time to check stock and give an accurate delivery quote for your location.
+                  Collection and return are free from our premises in Thornton Heath, Croydon. If you require delivery, you can request this option at checkout. You can also request pickup after your event - this is an additional charge calculated based on distance, and will be added to your invoice before the payment link is sent. Your invoice will be sent within one working day, giving us time to check stock and give accurate delivery/pickup quotes for your location.
                 </AccordionContent>
               </AccordionItem>
 

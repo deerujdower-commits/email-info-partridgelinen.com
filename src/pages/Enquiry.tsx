@@ -34,6 +34,7 @@ const Enquiry = () => {
   const { toast } = useToast();
   const [showFormModal, setShowFormModal] = useState(false);
   const [wantsDelivery, setWantsDelivery] = useState(false);
+  const [wantsPickup, setWantsPickup] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -130,9 +131,15 @@ const Enquiry = () => {
     // Add pricing summary
     const pricingSummary = `\n\nPricing Summary:\nTotal Price: £${orderPrice.toFixed(2)}\nRefundable Deposit: £${totalDeposit.toFixed(2)}\nEstimated Total: £${(orderPrice + totalDeposit).toFixed(2)}`;
     
-    const deliveryOption = wantsDelivery 
-      ? `\n\nDelivery: Yes, please quote for delivery\nDelivery Address: ${formData.address}\nPostcode: ${formData.postcode}` 
-      : '\n\nDelivery: No, I will collect';
+    let deliveryOption = '';
+    if (wantsDelivery) {
+      deliveryOption = `\n\nDelivery: Yes, please quote for delivery\nDelivery Address: ${formData.address}\nPostcode: ${formData.postcode}`;
+      if (wantsPickup) {
+        deliveryOption += '\nPickup Required: Yes, please also quote for pickup after the event';
+      }
+    } else {
+      deliveryOption = '\n\nDelivery: No, I will collect and return';
+    }
     
     const emailBody = `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}${deliveryOption}\n\nItems Requested:\n${itemsList}${pricingSummary}`;
     
@@ -151,6 +158,7 @@ const Enquiry = () => {
     // Clear form and enquiry
     clearEnquiry();
     setFormData({ name: '', email: '', phone: '', address: '', postcode: '' });
+    setWantsPickup(false);
     setShowFormModal(false);
   };
 
@@ -272,10 +280,10 @@ const Enquiry = () => {
                 </AccordionItem>
                 <AccordionItem value="free-collection" className="border-border">
                 <AccordionTrigger className="font-body text-foreground hover:text-accent text-left">
-                    What about collection?
+                    What about collection and pickup?
                   </AccordionTrigger>
                   <AccordionContent className="text-foreground/70 font-body text-left">
-                    Collection from our premises is always free. Simply leave the delivery checkbox unticked and we'll arrange a convenient collection time with you.
+                    Collection and return to our premises is always free. If you choose delivery, you can also request pickup after your event. Pickup is an additional charge calculated based on distance, and will be added to your invoice before the payment link is sent.
                   </AccordionContent>
                 </AccordionItem>
               </Accordion>
@@ -345,10 +353,10 @@ const Enquiry = () => {
               },
               {
                 "@type": "Question",
-                "name": "What about collection?",
+                "name": "What about collection and pickup?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Collection from our premises is always free. Simply leave the delivery checkbox unticked and we'll arrange a convenient collection time with you."
+                  "text": "Collection and return to our premises is always free. If you choose delivery, you can also request pickup after your event. Pickup is an additional charge calculated based on distance, and will be added to your invoice before the payment link is sent."
                 }
               },
               {
@@ -536,7 +544,10 @@ const Enquiry = () => {
                   <Checkbox 
                     id="delivery" 
                     checked={wantsDelivery}
-                    onCheckedChange={(checked) => setWantsDelivery(checked as boolean)}
+                    onCheckedChange={(checked) => {
+                      setWantsDelivery(checked as boolean);
+                      if (!checked) setWantsPickup(false);
+                    }}
                     className="h-5 w-5 border-white/50 data-[state=checked]:bg-white data-[state=checked]:text-accent-blue"
                   />
                   <label htmlFor="delivery" className="font-body text-white cursor-pointer flex items-center gap-2">
@@ -558,6 +569,24 @@ const Enquiry = () => {
                   <p className="text-sm text-white/60 font-body mt-2 ml-8">
                     Free collection available from our premises
                   </p>
+                )}
+                {wantsDelivery && (
+                  <div className="mt-4 ml-8">
+                    <div className="flex items-center gap-3">
+                      <Checkbox 
+                        id="pickup" 
+                        checked={wantsPickup}
+                        onCheckedChange={(checked) => setWantsPickup(checked as boolean)}
+                        className="h-5 w-5 border-white/50 data-[state=checked]:bg-white data-[state=checked]:text-accent-blue"
+                      />
+                      <label htmlFor="pickup" className="font-body text-white cursor-pointer text-sm">
+                        I also need pickup after the event (additional charge applies)
+                      </label>
+                    </div>
+                    <p className="text-xs text-white/60 font-body mt-2 ml-8">
+                      Pickup cost will be added to your invoice before payment link is sent
+                    </p>
+                  </div>
                 )}
               </div>
 
@@ -611,10 +640,10 @@ const Enquiry = () => {
               </AccordionItem>
               <AccordionItem value="free-collection" className="border-border">
                 <AccordionTrigger className="font-body text-foreground hover:text-accent text-left">
-                  What about collection?
+                  What about collection and pickup?
                 </AccordionTrigger>
                 <AccordionContent className="text-foreground/70 font-body text-left">
-                  Collection from our premises is always free. Simply leave the delivery checkbox unticked and we'll arrange a convenient collection time with you.
+                  Collection and return to our premises is always free. If you choose delivery, you can also request pickup after your event. Pickup is an additional charge calculated based on distance, and will be added to your invoice before the payment link is sent.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="deposit-info" className="border-border">
