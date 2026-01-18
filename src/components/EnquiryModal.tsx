@@ -23,14 +23,16 @@ const EnquiryModal = memo(({ isOpen, onClose, productName }: EnquiryModalProps) 
   const [isCopied, setIsCopied] = useState(false);
   const { toast } = useToast();
 
-  // Update message when productName changes - clear if no product context
+  // Update message when productName changes or modal opens - clear if no product context
   useEffect(() => {
-    if (productName) {
-      setMessage(`I would like to enquire about: ${productName}`);
-    } else {
-      setMessage('');
+    if (isOpen) {
+      if (productName) {
+        setMessage(`I would like to enquire about: ${productName}`);
+      } else {
+        setMessage('');
+      }
     }
-  }, [productName]);
+  }, [productName, isOpen]);
 
   const emailAddress = 'info@partridgelinen.com';
   const phoneNumberTel = '02086536066';
