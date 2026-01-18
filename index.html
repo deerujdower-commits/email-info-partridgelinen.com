@@ -21,8 +21,11 @@
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@300;400;500;600&display=swap">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
     
-    <!-- Preload hero image for faster LCP -->
+    <!-- Preload hero image for faster LCP - use Vite's hashed asset path at build time -->
     <link rel="preload" as="image" href="/src/assets/partridge-linen-homepage-hero-silver-damask.webp" type="image/webp" fetchpriority="high">
+    
+    <!-- Preload critical CSS -->
+    <link rel="preload" as="style" href="/src/index.css">
 
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Partridge Linen - Premium Restaurant, Hotel & Event Linens" />
