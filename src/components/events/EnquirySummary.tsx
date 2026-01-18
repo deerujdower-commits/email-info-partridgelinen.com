@@ -14,24 +14,31 @@ const EnquirySummary = () => {
   
   // Track if expanded (on mobile, collapsed by default)
   const [isExpanded, setIsExpanded] = useState(false);
+  const [shouldBounce, setShouldBounce] = useState(false);
   const prevItemCountRef = useRef(totalItems);
   const autoCollapseTimerRef = useRef<NodeJS.Timeout | null>(null);
 
   // Auto-expand when new item added, then auto-collapse after 2s (mobile only)
   useEffect(() => {
-    if (isMobile && totalItems > prevItemCountRef.current) {
-      // New item was added
-      setIsExpanded(true);
+    if (totalItems > prevItemCountRef.current) {
+      // New item was added - trigger bounce animation
+      setShouldBounce(true);
+      setTimeout(() => setShouldBounce(false), 600);
       
-      // Clear any existing timer
-      if (autoCollapseTimerRef.current) {
-        clearTimeout(autoCollapseTimerRef.current);
+      if (isMobile) {
+        // Expand on mobile
+        setIsExpanded(true);
+        
+        // Clear any existing timer
+        if (autoCollapseTimerRef.current) {
+          clearTimeout(autoCollapseTimerRef.current);
+        }
+        
+        // Auto-collapse after 2 seconds
+        autoCollapseTimerRef.current = setTimeout(() => {
+          setIsExpanded(false);
+        }, 2000);
       }
-      
-      // Auto-collapse after 2 seconds
-      autoCollapseTimerRef.current = setTimeout(() => {
-        setIsExpanded(false);
-      }, 2000);
     }
     
     prevItemCountRef.current = totalItems;
@@ -51,7 +58,7 @@ const EnquirySummary = () => {
     return (
       <button
         onClick={() => setIsExpanded(true)}
-        className="fixed bottom-4 right-4 z-50 bg-primary text-primary-foreground rounded-full p-4 shadow-xl flex items-center gap-2 active:scale-95 transition-transform"
+        className={`fixed bottom-4 right-4 z-50 bg-primary text-primary-foreground rounded-full p-4 shadow-xl flex items-center gap-2 active:scale-95 transition-transform ${shouldBounce ? 'animate-bounce' : ''}`}
         aria-label="View enquiry basket"
       >
         <ShoppingBag className="w-6 h-6" />
