@@ -103,11 +103,6 @@ const EventProductSection = ({
     };
     
     addItem(item);
-    
-    toast({
-      title: "Added to enquiry",
-      description: `${quantity}x ${selectedColor.name} ${selectedProductType.label} (${selectedSize.label})`,
-    });
 
     // Reset quantity for next addition
     setQuantity(0);

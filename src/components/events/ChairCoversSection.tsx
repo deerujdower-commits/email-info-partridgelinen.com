@@ -46,11 +46,6 @@ const ChairCoversSection = () => {
       description: `${selectedChairColor.name} Chair Cover`,
       price: chairPrice,
     });
-    
-    toast({
-      title: "Added to enquiry",
-      description: `${chairQuantity}x ${selectedChairColor.name} Chair Cover`,
-    });
 
     setChairQuantity(0);
   };
@@ -84,10 +79,6 @@ const ChairCoversSection = () => {
       price: sashPrice,
     });
     
-    toast({
-      title: "Added to enquiry",
-      description: `${sashQuantity}x ${sashColour.trim()} Chair Cover Sash`,
-    });
     setSashColour('');
     setSashQuantity(0);
   };
