@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { useToast } from '@/hooks/use-toast';
+import { openMailto } from '@/lib/openMailto';
 import { z } from 'zod';
 
 const contactSchema = z.object({
@@ -26,15 +27,22 @@ const SoftCTA = () => {
       const validatedData = contactSchema.parse(formData);
       setIsSubmitting(true);
 
-      // Encode data for WhatsApp
-      const message = `New enquiry from website:%0A%0AName: ${encodeURIComponent(validatedData.name)}%0AEmail: ${encodeURIComponent(validatedData.email)}%0APhone: ${encodeURIComponent(validatedData.phone)}`;
-      const whatsappUrl = `https://wa.me/447949387849?text=${message}`;
-      
-      window.open(whatsappUrl, '_blank');
+      // Build email body
+      const body = 
+        `New enquiry from website\n\n` +
+        `Name: ${validatedData.name}\n` +
+        `Email: ${validatedData.email}\n` +
+        `Phone: ${validatedData.phone}`;
+
+      openMailto({
+        to: 'info@partridgelinen.com',
+        subject: 'Website Enquiry',
+        body
+      });
       
       toast({
         title: "Thank you!",
-        description: "We'll be in touch shortly.",
+        description: "Your email client has been opened. Please send the email to complete your enquiry.",
       });
 
       setFormData({ name: '', email: '', phone: '' });
