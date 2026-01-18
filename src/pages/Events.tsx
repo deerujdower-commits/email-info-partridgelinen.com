@@ -540,6 +540,8 @@ const Events = () => {
                         alt={image.alt} 
                         className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 hover:scale-110" 
                         loading="lazy"
+                        width={300}
+                        height={300}
                       />
                     </button>
                   ))}

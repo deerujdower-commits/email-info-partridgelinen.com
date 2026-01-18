@@ -454,6 +454,8 @@ const CollectionModal = ({ isOpen, onClose, category, fromEventsPage = false }: 
                   decoding="async"
                   fetchPriority="high"
                   draggable={false}
+                  width={800}
+                  height={600}
                 />
                 {/* Preload adjacent images for smoother transitions */}
                 {currentImages.length > 1 && (

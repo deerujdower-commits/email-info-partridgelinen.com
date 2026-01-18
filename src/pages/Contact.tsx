@@ -404,6 +404,8 @@ const Contact = () => {
                             src={buildingExterior} 
                             alt="Partridge Linen headquarters building exterior in Thornton Heath, London" 
                             className="w-full max-w-md rounded-lg object-cover"
+                            width={448}
+                            height={336}
                           />
                           <p className="text-xs text-muted-foreground mt-2">
                             This is what our building looks like when you visit

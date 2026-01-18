@@ -123,6 +123,8 @@ const InstagramGallery = memo(({ images, isOpen, onClose }: InstagramGalleryProp
                   pressedIndex === index && 'scale-95'
                 )}
                 draggable={false}
+                width={400}
+                height={400}
               />
 
               {/* Hover Preview Popup - Desktop only */}

@@ -183,6 +183,8 @@ const ChairCoversSection = () => {
                 alt={`${selectedChairColor.name} stretch chair cover for event hire - elasticated fit for banquet chairs`}
                 className="w-full h-40 sm:w-48 sm:h-48 lg:w-56 lg:h-56 object-contain"
                 loading="lazy"
+                width={224}
+                height={224}
               />
             </div>
             <p className="text-sm text-center mt-2 font-body text-foreground/70">{selectedChairColor.name}</p>
@@ -271,6 +273,8 @@ const ChairCoversSection = () => {
                   alt="Decorative satin chair sash tied in bow on white chair cover - available in multiple colours for event hire"
                   className="w-full h-40 sm:w-48 sm:h-48 lg:w-56 lg:h-56 object-contain"
                   loading="lazy"
+                  width={224}
+                  height={224}
                 />
               </div>
               <p className="text-sm text-center mt-2 font-body text-foreground/70">Example sash</p>

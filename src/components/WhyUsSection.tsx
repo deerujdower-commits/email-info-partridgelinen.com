@@ -34,6 +34,8 @@ const WhyUsSection = ({ heading, subheading, features, imagePlaceholder, images,
                 alt={`Partridge Linen - ${heading}`} 
                 className="w-full h-full object-cover aspect-[4/3] lg:aspect-auto"
                 loading="lazy"
+                width={600}
+                height={450}
               />
             ) : (
               <div className="w-full h-full flex items-center justify-center bg-muted/20 aspect-[4/3] lg:aspect-auto">
@@ -91,6 +93,8 @@ const WhyUsSection = ({ heading, subheading, features, imagePlaceholder, images,
                   alt={`Partridge Linen - ${heading}`} 
                   className="w-full h-full object-cover aspect-[4/3] lg:aspect-auto"
                   loading="lazy"
+                  width={600}
+                  height={450}
                 />
               ) : displayImages.length === 2 ? (
                 <div className="grid grid-cols-2 h-full">
@@ -101,6 +105,8 @@ const WhyUsSection = ({ heading, subheading, features, imagePlaceholder, images,
                       alt={`Partridge Linen ${heading} - image ${idx + 1}`} 
                       className="w-full h-full object-cover"
                       loading="lazy"
+                      width={300}
+                      height={450}
                     />
                   ))}
                 </div>
@@ -111,18 +117,24 @@ const WhyUsSection = ({ heading, subheading, features, imagePlaceholder, images,
                     alt={`Partridge Linen ${heading} - featured image`} 
                     className="w-full h-full object-cover row-span-2"
                     loading="lazy"
+                    width={300}
+                    height={500}
                   />
                   <img 
                     src={displayImages[1]} 
                     alt={`Partridge Linen ${heading} - detail image 1`} 
                     className="w-full h-full object-cover"
                     loading="lazy"
+                    width={300}
+                    height={250}
                   />
                   <img 
                     src={displayImages[2]} 
                     alt={`Partridge Linen ${heading} - detail image 2`} 
                     className="w-full h-full object-cover"
                     loading="lazy"
+                    width={300}
+                    height={250}
                   />
                 </div>
               )}

@@ -90,6 +90,8 @@ The next generation of the Partridge family brings fresh ideas and energy to the
                 src={section.image}
                 alt={`Partridge Linen - ${section.title}: ${section.subtitle}`}
                 className="w-full h-full object-cover"
+                width={600}
+                height={450}
               />
             </div>
           </div>
