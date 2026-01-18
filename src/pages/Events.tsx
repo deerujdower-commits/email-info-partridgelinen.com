@@ -435,7 +435,7 @@ const Events = () => {
                 "name": "When will I receive my invoice/payment link?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Your full invoice, including any delivery charges, will be emailed to you within one working day of placing your order. This gives us time to check stock and give an accurate delivery quote for your location. A SumUp payment link will be included in the email, allowing you to pay securely by credit or debit card."
+                  "text": "Your full invoice, including any delivery and pickup charges, will be emailed to you within one working day of placing your order. This gives us time to check stock and provide accurate quotes for your location. A SumUp payment link will be included in the email, allowing you to pay securely by credit or debit card."
                 }
               },
               {
