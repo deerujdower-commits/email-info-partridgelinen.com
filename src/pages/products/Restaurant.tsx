@@ -243,6 +243,8 @@ const Restaurant = () => {
           alt="Elegant restaurant table setting with white tablecloth and napkins"
           className="w-full h-full object-cover"
           priority
+          width={1920}
+          height={1080}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-black/40" />
         <div className="absolute bottom-0 left-0 right-0 p-8 md:p-12">
@@ -295,6 +297,8 @@ const Restaurant = () => {
                     src={product.images[0]}
                     alt={product.alt}
                     className="w-full h-full object-contain hover:scale-105 transition-transform duration-500"
+                    width={400}
+                    height={300}
                   />
                 </div>
                 <div className="p-6 flex flex-col flex-grow">

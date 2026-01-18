@@ -153,6 +153,8 @@ const EventProductSection = ({
                       alt={`${color.name} ${title.toLowerCase()} fabric swatch for event linen hire`}
                       className="w-full h-full object-cover"
                       loading="lazy"
+                      width={48}
+                      height={48}
                     />
                   ) : null}
                   {selectedColor.name === color.name && (
@@ -182,6 +184,8 @@ const EventProductSection = ({
                 alt={`${selectedColor.name} ${title.toLowerCase()} fabric - close-up preview of damask pattern and colour`}
                 className="w-full h-40 sm:w-48 sm:h-48 lg:w-56 lg:h-56 object-cover"
                 loading="lazy"
+                width={224}
+                height={224}
               />
             </div>
             <p className="text-sm text-center mt-2 font-body text-foreground/70">{selectedColor.name}</p>

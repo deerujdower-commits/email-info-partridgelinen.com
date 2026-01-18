@@ -163,6 +163,8 @@ const Kitchen = () => {
           alt="Professional chefs working in a commercial kitchen"
           className="w-full h-full object-cover"
           priority
+          width={1920}
+          height={1080}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-black/40" />
         <div className="absolute bottom-0 left-0 right-0 p-8 md:p-12">
@@ -206,6 +208,8 @@ const Kitchen = () => {
                       src={item.image}
                       alt={item.alt}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      width={300}
+                      height={300}
                     />
                     <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                       <span className="text-white font-body font-medium text-lg">Order Now</span>
@@ -234,6 +238,8 @@ const Kitchen = () => {
                       src={item.image}
                       alt={item.alt}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      width={300}
+                      height={300}
                     />
                     <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                       <span className="text-white font-body font-medium text-lg">Order Now</span>
