@@ -108,8 +108,8 @@ export const EnquiryProvider: React.FC<EnquiryProviderProps> = ({ children }) =>
 
     // Napkin images from collection page
     const napkinImages = {
-      white: '/lovable-uploads/15ff459d-cb36-41a5-bb8d-4c0be0f0f345.png',
-      black: '/lovable-uploads/005231c4-59e0-4684-9317-0f2b0a3f6c5a.png',
+      white: '/lovable-uploads/cf54b1ce-fef7-4ac1-8bbc-34b126347063.png',
+      black: '/lovable-uploads/e059eed4-9708-4d5a-8545-42094ce503da.png',
       ivory: '/lovable-uploads/788eb1d4-c9b5-434b-8d56-65ffdcd67cb8.png'
     };
 
@@ -122,9 +122,9 @@ export const EnquiryProvider: React.FC<EnquiryProviderProps> = ({ children }) =>
 
     // Damask images from collection page
     const damaskImages = {
-      white: '/lovable-uploads/15ff459d-cb36-41a5-bb8d-4c0be0f0f345.png',
-      gold: '/lovable-uploads/2733f275-4abc-4211-8663-e86feb172f9d.png',
-      silver: '/lovable-uploads/865b7e1c-12c9-4d71-b3fc-4d0c492cdd9a.png'
+      white: '/lovable-uploads/cf54b1ce-fef7-4ac1-8bbc-34b126347063.png',
+      gold: '/lovable-uploads/cf54b1ce-fef7-4ac1-8bbc-34b126347063.png',
+      silver: '/lovable-uploads/cf54b1ce-fef7-4ac1-8bbc-34b126347063.png'
     };
 
     // Tablecloth images from collection page
@@ -227,7 +227,7 @@ export const EnquiryProvider: React.FC<EnquiryProviderProps> = ({ children }) =>
         suggestions.push({ 
           name: 'Chef Trousers', 
           reason: 'Complete your professional uniform',
-          image: '/lovable-uploads/005231c4-59e0-4684-9317-0f2b0a3f6c5a.png'
+          image: '/lovable-uploads/cf54b1ce-fef7-4ac1-8bbc-34b126347063.png'
         });
       }
     }
@@ -238,7 +238,7 @@ export const EnquiryProvider: React.FC<EnquiryProviderProps> = ({ children }) =>
         suggestions.push({ 
           name: 'Chef Jacket', 
           reason: 'Complete your professional uniform',
-          image: '/lovable-uploads/d6d4a833-19ec-475e-bc4c-d85c2ba88188.png'
+          image: '/lovable-uploads/cf54b1ce-fef7-4ac1-8bbc-34b126347063.png'
         });
       }
     }
@@ -249,7 +249,7 @@ export const EnquiryProvider: React.FC<EnquiryProviderProps> = ({ children }) =>
         suggestions.push({ 
           name: 'Towels', 
           reason: 'Complete your hospitality collection',
-          image: '/lovable-uploads/7beb8eb7-1de2-46b5-81a8-ca8882919e42.png'
+          image: '/lovable-uploads/cf54b1ce-fef7-4ac1-8bbc-34b126347063.png'
         });
       }
     }

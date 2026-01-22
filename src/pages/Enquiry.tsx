@@ -24,10 +24,10 @@ import {
 
 // Import images from collection page
 const studioFittedWhiteTablecloth = '/lovable-uploads/cf54b1ce-fef7-4ac1-8bbc-34b126347063.png';
-const studioFittedWhiteNapkins = '/lovable-uploads/ba361677-0711-413a-901e-2ef6e8e9905c.png';
-const chefJacketNew = '/lovable-uploads/d6d4a833-19ec-475e-bc4c-d85c2ba88188.png';
-const chefTrousersNew = '/lovable-uploads/005231c4-59e0-4684-9317-0f2b0a3f6c5a.png';
-const towelImage = '/lovable-uploads/92183863-59d1-46cc-b1d8-7cd663c0a9db.png';
+const studioFittedWhiteNapkins = '/lovable-uploads/cf54b1ce-fef7-4ac1-8bbc-34b126347063.png';
+const chefJacketNew = '/lovable-uploads/cf54b1ce-fef7-4ac1-8bbc-34b126347063.png';
+const chefTrousersNew = '/lovable-uploads/e059eed4-9708-4d5a-8545-42094ce503da.png';
+const towelImage = '/lovable-uploads/788eb1d4-c9b5-434b-8d56-65ffdcd67cb8.png';
 
 const Enquiry = () => {
   const { items, removeItem, updateQuantity, clearEnquiry, getTotalItems } = useEnquiry();
